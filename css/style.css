@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@300;400;500;600;700;800&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Karla", sans-serif;
+  font-size: 18px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Lora", serif;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header {
+  height: 90px;
+  display: flex;
+  align-items: center;
+  background-color: rgb(245, 243, 243);
+}
+.header h1 {
+  color: #2e4d43;
+  margin-left: 20px;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  clip-path: circle(25px at calc(100% - 45px) 45px);
+  transition: all 0.3s ease-in-out;
+}
+.navbar ul {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.navbar ul li {
+  margin: 15px 0;
+}
+.navbar ul li a {
+  color: none;
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: 500;
+  padding: 5px 30px;
+  color: #fff;
+  border-radius: 50px;
+  position: relative;
+  line-height: 50px;
+  transition: all 0.3s ease;
+}
+.navbar ul li a:hover {
+  background-color: #ffffff;
+  color: #102f25;
+}
+
+input[type=checkbox] {
+  display: none;
+}
+
+#active:checked ~ .navbar {
+  clip-path: circle(75%);
+  background-color: #2e4d43;
+  opacity: 0.95;
+}
+
+.menu-btn {
+  position: absolute;
+  z-index: 2;
+  right: 20px;
+  top: 20px;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #102f25;
+  cursor: pointer;
+  border: 3px solid #2e4d43;
+  transition: all 0.3s ease-in-out;
+}
+
+#active:checked ~ .menu-btn {
+  color: #ddd6d3;
+  border: 3px solid #ddd6d3;
+}
+
+#active:checked ~ .menu-btn i:before {
+  content: "\f00d";
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-block: 2rem;
+  background-color: rgb(245, 243, 243);
+  color: #102f25;
+  font-size: 24px;
+}
+
+.btn {
+  padding: 1rem 3rem;
+  border: none;
+  border-radius: 50px;
+  font-size: 22px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: "Karla", sans-serif;
+}
+
+.home {
+  background-image: url("../../images/dan-meyers-IQVFVH0ajag-unsplash.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  height: calc(100vh - 100px);
+  color: #ffffff;
+  text-shadow: 0 0px 3px black;
+  height: calc(100vh - 90px);
+}
+.home .home__title {
+  font-size: 4rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+.home .home__subtitle {
+  margin-block: 3rem;
+  font-size: 20px;
+}
+.home .home__date {
+  font-size: 28px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+.home .btn-home {
+  margin-top: 2rem;
+  background-color: #ddd6d3;
+  color: #102f25;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  text-shadow: none;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, transform 0.1s ease-in-out;
+}
+.home .btn-home:hover {
+  background-color: #102f25;
+  color: white;
+  opacity: 0.9;
+}
+.home .btn-home:active {
+  transform: translate(1px, 2px);
+}
+
+/*# sourceMappingURL=style.css.map */
