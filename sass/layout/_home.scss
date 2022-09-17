@@ -52,3 +52,9 @@
 		}
 	}
 }
+
+@media (max-width: 768px) {
+	.home__date {
+		max-width: 90%;
+	}
+}
