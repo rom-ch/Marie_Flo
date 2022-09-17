@@ -37,12 +37,13 @@ a {
 .header {
   height: 90px;
   display: flex;
+  justify-content: space-between;
   align-items: center;
+  padding-inline: 20px;
   background-color: rgb(245, 243, 243);
 }
 .header h1 {
   color: #2e4d43;
-  margin-left: 20px;
 }
 
 .navbar {
@@ -75,6 +76,7 @@ a {
   position: relative;
   line-height: 50px;
   transition: all 0.3s ease;
+  white-space: nowrap;
 }
 .navbar ul li a:hover {
   background-color: #ffffff;
@@ -92,10 +94,7 @@ input[type=checkbox] {
 }
 
 .menu-btn {
-  position: absolute;
   z-index: 2;
-  right: 20px;
-  top: 20px;
   height: 50px;
   width: 50px;
   text-align: center;
@@ -104,19 +103,79 @@ input[type=checkbox] {
   font-size: 20px;
   color: #102f25;
   cursor: pointer;
-  border: 3px solid #2e4d43;
+  border: 2px solid #2e4d43;
   transition: all 0.3s ease-in-out;
 }
 
 #active:checked ~ .menu-btn {
   color: #ddd6d3;
-  border: 3px solid #ddd6d3;
+  border: 2px solid #ddd6d3;
 }
 
 #active:checked ~ .menu-btn i:before {
   content: "\f00d";
 }
 
+.dropbtn {
+  border: 2px solid #102f25;
+  border-radius: 0.5rem;
+  padding: 0.3rem 0.3rem;
+  width: 40px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+}
+.dropbtn i {
+  font-size: 15px;
+  color: #102f25;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #102f25;
+  padding: 8px 12px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+}
+.dropdown-content a:first-child {
+  border-bottom: 1px solid rgb(223, 220, 220);
+}
+.dropdown-content a img {
+  width: 15px;
+}
+
+.dropdown-content a:hover {
+  background-color: #c4d0cd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #c4d0cd;
+}
+
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 30px;
+  }
+}
 .footer {
   display: flex;
   justify-content: center;
@@ -138,7 +197,7 @@ input[type=checkbox] {
 }
 
 .home {
-  background-image: url("../../images/dan-meyers-IQVFVH0ajag-unsplash.jpg");
+  background-image: url("../../images/dan-meyers-IQVFVH0ajag-unsplash.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom;
@@ -151,6 +210,7 @@ input[type=checkbox] {
   color: #ffffff;
   text-shadow: 0 0px 3px black;
   height: calc(100vh - 90px);
+  text-align: center;
 }
 .home .home__title {
   font-size: 4rem;
@@ -180,7 +240,7 @@ input[type=checkbox] {
   opacity: 0.9;
 }
 .home .btn-home:active {
-  transform: translate(1px, 2px);
+  transform: translateY(2px);
 }
 
 /*# sourceMappingURL=style.css.map */
