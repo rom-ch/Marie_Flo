@@ -54,6 +54,11 @@
 }
 
 @media (max-width: 768px) {
+	.home {
+		justify-content: flex-start;
+		padding-top: 3rem;
+	}
+
 	.home__date {
 		max-width: 90%;
 	}
