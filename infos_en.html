@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -11,11 +11,27 @@
 			crossorigin="anonymous"
 			referrerpolicy="no-referrer"
 		/>
-		<link rel="stylesheet" href="../css/style.css" />
+		<link rel="stylesheet" href="css/style.css" />
 		<title>Marie & Florent - Infos</title>
 	</head>
 	<body>
 		<header class="header">
+			<div class="dropdown">
+				<button class="dropbtn">
+					<i class="fa-solid fa-earth-americas"></i>
+					<i class="fa-solid fa-caret-down"></i>
+				</button>
+				<div class="dropdown-content">
+					<a href="index.html">
+						<img src="../images/fr.svg" alt="#" />
+						Français
+					</a>
+					<a href="../en/index.html">
+						<img src="../images/us.svg" alt="#" />
+						English
+					</a>
+				</div>
+			</div>
 			<h1>Marie & Florent</h1>
 			<input type="checkbox" id="active" />
 			<label for="active" class="menu-btn"
@@ -27,7 +43,7 @@
 						<a href="index.html" class="nav-link">Accueil</a>
 					</li>
 					<li class="nav-item">
-						<a href="#" class="nav-link">Infos Générales</a>
+						<a href="infos_en.html" class="nav-link">Infos Générales</a>
 					</li>
 					<li class="nav-item">
 						<a href="#" class="nav-link">RSVP</a>
@@ -55,7 +71,61 @@
 		</header>
 
 		<main>
-			<section class="infos"></section>
+			<section class="infos-page">
+				<div class="infos-container">
+					<h1>CEREMONY & CELEBRATION</h1>
+					<div class="infos">
+						<div class="info">
+							<span class="info__icon"
+								><img src="images/noun-dating-date-2219349.svg" alt="#"
+							/></span>
+							<h3 class="info__title">Our wedding day</h3>
+							<p class="info__time">Saturday 6th May, 2023</p>
+						</div>
+						<div class="info">
+							<span class="info__icon"
+								><img src="images/noun-ceremony-3858391.svg" alt="#"
+							/></span>
+							<h3 class="info__title">Ceremony</h3>
+							<p class="info__time">5:00 PM</p>
+							<p class="info__address">
+								Le Petit Wettolsheim,<br />
+								57 Route d'Eguisheim<br />
+								68920 Wettolsheim France
+							</p>
+						</div>
+						<div class="info">
+							<span class="info__icon"
+								><img src="images/noun-celebration-1459172.svg" alt="#"
+							/></span>
+							<h3 class="info__title">Reception</h3>
+							<p class="info__time">8:00 PM</p>
+							<p class="info__address">
+								Le Petit Wettolsheim,<br />
+								57 Route d'Eguisheim<br />
+								68920 Wettolsheim France
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="caroussel">
+					<img src="images/infos1.webp" alt="#" />
+					<img src="images/infos2.webp" alt="#" />
+					<img src="images/infos3.webp" alt="#" />
+					<img src="images/infos4.webp" alt="#" />
+					<img src="images/infos5.webp" alt="#" />
+				</div>
+
+				<h2 class="dresscode-title">DRESSCODE</h2>
+
+				<div class="dresscode">
+					<span><img src="images/noun-business-man-398645.svg" alt="#" /></span>
+					<p>
+						Come as you are ! No dresscode for the ceremony and the Sunday
+						brunch.
+					</p>
+				</div>
+			</section>
 		</main>
 
 		<footer class="footer">
