@@ -294,17 +294,16 @@ input[type=checkbox] {
 
 .caroussel {
   margin: 5rem auto 0 auto;
-  width: 1200px;
+  padding: 1rem;
+  max-width: 1200px;
   display: grid;
   gap: 1rem;
-  grid-template-columns: 300px 300px 600px;
-  grid-template-columns: 300px 300px;
+  grid-template-columns: 1fr 1fr 2fr;
   grid-template-areas: "infos1 infos2 infos3" "infos4 infos5 infos3";
 }
 .caroussel img {
   aspect-ratio: 1/1;
   object-fit: cover;
-  width: 300px;
 }
 .caroussel img:nth-of-type(1) {
   grid-area: infos1;
@@ -314,8 +313,7 @@ input[type=checkbox] {
 }
 .caroussel img:nth-of-type(3) {
   grid-area: infos3;
-  width: 600px;
-  height: 616px;
+  height: 100%;
 }
 .caroussel img:nth-of-type(4) {
   grid-area: infos4;
@@ -334,6 +332,8 @@ input[type=checkbox] {
   justify-content: center;
   align-items: center;
   margin-bottom: 3rem;
+  max-width: 90%;
+  margin: 0 auto;
 }
 .dresscode span img {
   width: 100px;
@@ -347,7 +347,7 @@ input[type=checkbox] {
     flex-direction: column;
     margin-top: 3rem;
     max-width: 100%;
-    gap: 3rem;
+    gap: 4rem;
   }
   .info {
     gap: 0.5rem;
@@ -370,13 +370,83 @@ input[type=checkbox] {
     margin-top: 3rem;
   }
   .dresscode {
-    max-width: 90%;
-    margin: 0 auto;
     margin-block: 1rem 2rem;
-    text-align: center;
   }
-  .dresscode span {
-    display: block;
+}
+@media (min-width: 769px) and (max-width: 992px) {
+  .infos-container {
+    padding-inline: 1rem;
+  }
+  .infos {
+    max-width: 100%;
+  }
+}
+.localisation-wrapper {
+  min-height: calc(100vh - 90px);
+  background-color: #ddd6d3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-inline: 2rem;
+}
+
+.localisation {
+  width: 950px;
+  padding: 5rem 3rem;
+  background-color: #718879;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.localisation__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+  align-items: center;
+}
+.localisation__text-title {
+  font-size: 36px;
+}
+.localisation__text-content {
+  text-align: center;
+  font-size: 22px;
+  line-height: 1.3;
+}
+.localisation__text-icon svg {
+  width: 100px;
+  height: 100px;
+  fill: white;
+}
+.localisation__map {
+  display: block;
+  border: 7px solid white;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  .localisation {
+    padding-inline: 1.5rem;
+  }
+  .localisation__map iframe {
+    width: 350px;
+  }
+}
+@media (max-width: 768px) {
+  .localisation-wrapper {
+    padding-inline: 0;
+  }
+  .localisation {
+    flex-direction: column;
+    gap: 3rem;
+    padding: 2rem 0.5rem;
+  }
+  .localisation__map iframe {
+    width: 340px;
+    height: 340px;
   }
 }
 
