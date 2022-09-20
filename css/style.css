@@ -690,4 +690,14 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
+@media (max-width: 768px) {
+  .rsvp {
+    padding-inline: 0.5rem;
+  }
+  .rsvp .form {
+    width: 100%;
+    padding: 1rem;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
