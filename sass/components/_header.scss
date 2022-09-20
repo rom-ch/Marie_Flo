@@ -22,6 +22,7 @@
 	width: 100%;
 	clip-path: circle(25px at calc(100% - 45px) 45px);
 	transition: all 0.3s ease-in-out;
+	z-index: 1;
 
 	ul {
 		position: absolute;
@@ -55,7 +56,7 @@
 	}
 }
 
-input[type='checkbox'] {
+input[type='checkbox']#active {
 	display: none;
 }
 

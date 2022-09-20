@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+			integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<link rel="stylesheet" href="css/style.css" />
+		<title>Marie & Florent - Accueil</title>
+	</head>
+	<body>
+		<header class="header">
+			<div class="dropdown">
+				<button class="dropbtn">
+					<i class="fa-solid fa-earth-americas"></i>
+					<i class="fa-solid fa-caret-down"></i>
+				</button>
+				<div class="dropdown-content">
+					<a href="index.html">
+						<img src="./images/fr.svg" alt="#" />
+						Français
+					</a>
+					<a href="index_en.html">
+						<img src="./images/us.svg" alt="#" />
+						English
+					</a>
+				</div>
+			</div>
+			<h1>Marie & Florent</h1>
+
+			<input type="checkbox" id="active" />
+			<label for="active" class="menu-btn"
+				><i class="fa-solid fa-bars"></i
+			></label>
+
+			<nav class="navbar">
+				<ul class="nav-menu">
+					<li class="nav-item">
+						<a href="index.html" class="nav-link">Accueil</a>
+					</li>
+					<li class="nav-item">
+						<a href="infos.html" class="nav-link">Infos Générales</a>
+					</li>
+					<li class="nav-item">
+						<a href="rsvp.html" class="nav-link">RSVP</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link">Où dormir?</a>
+					</li>
+					<li class="nav-item">
+						<a href="localisation.html" class="nav-link">Comment venir?</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link">Planning</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link">Liste de mariage</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link">DJ</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link">Qui contacter?</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+
+		<main>
+			<section class="rsvp">
+				<!-- <img src="images/plant-1.webp" alt="" /> -->
+				<h2>RSVP</h2>
+				<form action="#" class="form">
+					<div class="name">
+						<div class="form__group">
+							<input
+								type="text"
+								id="lname"
+								class="form__field"
+								placeholder="Nom"
+								required
+							/>
+							<label for="lname" class="form__label">Nom</label>
+						</div>
+						<div class="form__group">
+							<input
+								type="text"
+								id="fname"
+								class="form__field"
+								placeholder="Prénom"
+								required
+							/>
+							<label for="fname" class="form__label">Prénom</label>
+						</div>
+					</div>
+
+					<div class="attend">
+						<label for="not-attend" class="radio">
+							<input
+								type="radio"
+								id="not-attend"
+								name="attending"
+								class="radio__input"
+							/>
+							<span class="radio__radio"></span>
+							Ne pourra être présent au mariage
+						</label>
+
+						<label for="attend-wedding" class="radio">
+							<input
+								type="radio"
+								name="attending"
+								id="attend-wedding"
+								class="radio__input"
+							/>
+							<span class="radio__radio"></span>
+							Sera présent au mariage
+						</label>
+
+						<div class="checkbox-container">
+							<input type="checkbox" id="attend-brunch" />
+							<label for="attend-brunch" class="brunch"
+								>Sera présent pour le brunch du lendemin</label
+							>
+						</div>
+					</div>
+
+					<div class="guest-info">
+						<div class="number-container">
+							<label for="nb-adult">Nombre d'adultes : </label>
+							<input
+								type="number"
+								name="nb-adult"
+								id="nb-adult"
+								min="1"
+								max="50"
+								step="1"
+							/>
+						</div>
+						<div class="number-container">
+							<label for="nb-children"
+								>Nombre d'enfants (qui ont besoin d'un repas) :
+							</label>
+							<input
+								type="number"
+								name="nb-children"
+								id="nb-children"
+								min="1"
+								max="50"
+								step="1"
+							/>
+						</div>
+
+						<div class="checkbox-container food-wrapper">
+							<input type="checkbox" id="food" name="food" />
+							<label for="food">Allergies & Restrictions alimentaires </label>
+						</div>
+						<div class="add-food">
+							<input type="text" name="add" id="food-input" />
+							<button class="btn-add">Ajouter</button>
+						</div>
+					</div>
+
+					<ul class="food-list"></ul>
+					<button type="submit">Envoyer</button>
+				</form>
+			</section>
+		</main>
+
+		<footer class="footer">
+			<h2 class="footer__title">Marie & Florent</h2>
+		</footer>
+
+		<script src="rsvp.js"></script>
+	</body>
+</html>
