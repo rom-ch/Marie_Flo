@@ -2,7 +2,7 @@
 
 .rsvp-wrapper {
 	min-height: calc(100vh - 90px);
-	background: url('../../images/pawel-czerwinski-qzaIDFtzcZ0-unsplash.jpg');
+	background: url('../../images/pawel-czerwinski-qzaIDFtzcZ0-unsplash.webp');
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
@@ -150,14 +150,17 @@
 	width: 100%;
 	border: 0;
 	border-bottom: 2px solid $clr-primary-400;
-	border-radius: 0;
-	-webkit-appearance: none;
 	outline: 0;
 	font-size: 1.3rem;
 	color: $clr-primary-100;
 	padding: 7px 0;
 	background: transparent;
 	transition: border-color 0.3s;
+
+	-webkit-border-radius: 0;
+	border-radius: 0;
+	-webkit-box-shadow: none;
+	box-shadow: none;
 
 	&::placeholder {
 		color: transparent;
