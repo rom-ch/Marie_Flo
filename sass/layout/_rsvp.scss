@@ -2,7 +2,7 @@
 
 .rsvp-wrapper {
 	min-height: calc(100vh - 90px);
-	background: url('../images/pawel-czerwinski-qzaIDFtzcZ0-unsplash.webp');
+	background-image: url('../images/pawel-czerwinski-qzaIDFtzcZ0-unsplash.webp');
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
@@ -33,6 +33,7 @@
 		display: flex;
 		flex-direction: column;
 		color: $clr-primary-900;
+		font-weight: 500;
 
 		.name {
 			display: flex;
