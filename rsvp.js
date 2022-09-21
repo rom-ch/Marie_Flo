@@ -47,7 +47,7 @@ const addFood = document.querySelector('.add-food');
 
 checkboxFood.addEventListener('click', () => {
 	if (checkboxFood.checked) {
-		addFood.style.display = 'block';
+		addFood.style.display = 'flex';
 	} else {
 		addFood.style.display = 'none';
 	}

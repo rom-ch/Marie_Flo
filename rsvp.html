@@ -72,7 +72,7 @@
 			</nav>
 		</header>
 
-		<main>
+		<main class="rsvp-wrapper">
 			<section class="rsvp">
 				<!-- <img src="images/plant-1.webp" alt="" /> -->
 				<h2>RSVP</h2>
@@ -163,14 +163,20 @@
 							<input type="checkbox" id="food" name="food" />
 							<label for="food">Allergies & Restrictions alimentaires </label>
 						</div>
-						<div class="add-food">
-							<input type="text" name="add" id="food-input" />
-							<button class="btn-add">Ajouter</button>
+						<div class="add-food form__group">
+							<input
+								type="text"
+								name="add"
+								id="food-input"
+								class="form__field"
+								placeholder="Ajouter ici"
+							/>
+							<button class="btn-form btn-add">Ajouter</button>
 						</div>
 					</div>
 
 					<ul class="food-list"></ul>
-					<button type="submit">Envoyer</button>
+					<button class="btn-form btn-submit" type="submit">Envoyer</button>
 				</form>
 			</section>
 		</main>
