@@ -218,13 +218,13 @@
 		}
 
 		&:checked + label::before {
-			content: '\002714';
+			content: '\f00c';
 			background-color: $clr-primary-300;
 			display: flex;
 			justify-content: center;
 			align-items: center;
 			color: $clr-primary-100;
-			font: initial;
+			font: normal normal normal 18px/1 FontAwesome;
 		}
 
 		&:active + label::before {
