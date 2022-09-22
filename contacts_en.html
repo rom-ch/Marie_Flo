@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+			integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<link rel="stylesheet" href="css/style.css" />
+		<title>Marie & Florent - Contacts</title>
+	</head>
+	<body>
+		<header class="header">
+			<div class="dropdown">
+				<button class="dropbtn">
+					<i class="fa-solid fa-earth-americas"></i>
+					<i class="fa-solid fa-caret-down"></i>
+				</button>
+				<div class="dropdown-content">
+					<a href="contacts.html">
+						<img src="./images/fr.svg" alt="#" />
+						Français
+					</a>
+					<a href="contacts_en.html">
+						<img src="./images/us.svg" alt="#" />
+						English
+					</a>
+				</div>
+			</div>
+			<h1>Marie & Florent</h1>
+
+			<input type="checkbox" id="active" />
+			<label for="active" class="menu-btn"
+				><i class="fa-solid fa-bars"></i
+			></label>
+
+			<nav class="navbar">
+				<ul class="nav-menu">
+					<li class="nav-item">
+						<a href="index_en.html" class="nav-link">Home</a>
+					</li>
+					<li class="nav-item">
+						<a href="infos_en.html" class="nav-link">General Informations</a>
+					</li>
+					<li class="nav-item">
+						<a href="rsvp_en.html" class="nav-link">RSVP</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link">Where to sleep?</a>
+					</li>
+					<li class="nav-item">
+						<a href="localisation_en.html" class="nav-link"
+							>How to get there?</a
+						>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link">Schedule</a>
+					</li>
+					<li class="nav-item">
+						<a href="liste_de_mariage_en.html" class="nav-link">Wedding list</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link">DJ</a>
+					</li>
+					<li class="nav-item">
+						<a href="contacts_en.html" class="nav-link">Who to contact?</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+
+		<main class="contacts-wrapper">
+			<section class="contacts">
+				<h2 class="contacts__title">CONTACTS</h2>
+				<div class="contacts__hero">
+					<p class="contacts__hero-subtitle">
+						We can't wait to celebrate our special day with you !
+					</p>
+					<p class="contacts__hero-text">
+						For any questions, or to speak to us, you can contact the following
+						persons:
+					</p>
+				</div>
+				<div class="contact-phone">
+					<h2>Until D-day</h2>
+					<div class="day before-day">
+						<div class="contact-wrapper">
+							<h3>Marie</h3>
+							<button class="contact">
+								<i class="fa-solid fa-phone"></i>
+								<span class="contact-number">+33 6 00 00 00 00</span>
+							</button>
+						</div>
+						<div class="contact-wrapper">
+							<h3>Florent</h3>
+							<button class="contact">
+								<i class="fa-solid fa-phone"></i>
+								<span class="contact-number">+33 6 30 43 77 58</span>
+							</button>
+						</div>
+					</div>
+					<h2>On D-day</h2>
+					<div class="day d-day">
+						<div class="contact-wrapper">
+							<h3>Pauline</h3>
+							<button class="contact">
+								<i class="fa-solid fa-phone"></i>
+								<span class="contact-number">+33 6 77 83 72 41</span>
+							</button>
+						</div>
+						<div class="contact-wrapper">
+							<h3>Alex</h3>
+							<button class="contact">
+								<i class="fa-solid fa-phone"></i>
+								<span class="contact-number">+33 6 00 00 00 00</span>
+							</button>
+						</div>
+						<div class="contact-wrapper">
+							<h3>Romain</h3>
+							<button class="contact">
+								<i class="fa-solid fa-phone"></i>
+								<span class="contact-number">+33 7 88 84 86 23</span>
+							</button>
+						</div>
+					</div>
+				</div>
+			</section>
+			<h2 class="planner">Wedding Planner: Morgane Morel</h2>
+		</main>
+
+		<footer class="footer">
+			<h2 class="footer__title">Marie & Florent</h2>
+		</footer>
+
+		<script src="contacts.js"></script>
+	</body>
+</html>
