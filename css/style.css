@@ -760,5 +760,90 @@ input[type=number] {
     padding: 1rem;
   }
 }
+.wedding-list {
+  padding: 3rem 2rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+}
+.wedding-list__grid {
+  margin: 0 auto 2rem auto;
+  max-width: 1100px;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  grid-template-areas: "pot1 pot2" "pot1 pot3";
+  gap: 1rem;
+}
+.wedding-list__grid img {
+  object-fit: cover;
+  object-position: center;
+  height: 100%;
+}
+.wedding-list__grid img:nth-of-type(1) {
+  grid-area: pot1;
+}
+.wedding-list__grid img:nth-of-type(2) {
+  grid-area: pot2;
+}
+.wedding-list__grid img:nth-of-type(3) {
+  grid-area: pot3;
+}
+.wedding-list .pot {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.wedding-list .pot__title {
+  font-size: 2rem;
+}
+.wedding-list .pot__text {
+  margin-block: 2rem;
+  font-weight: 500;
+}
+.wedding-list .pot .pot__btn {
+  color: #fff;
+  padding: 1rem 2rem;
+  display: block;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  border-radius: 50px;
+  width: 150px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background-color: #718879;
+  transition: all 0.2s ease-in-out;
+}
+.wedding-list .pot .pot__btn:hover, .wedding-list .pot .pot__btnfocus {
+  background-color: #2e4d43;
+}
+.wedding-list .pot .pot__btn:active {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+  .wedding-list {
+    padding-inline: 1rem;
+    padding-block: 1rem 2rem;
+  }
+  .wedding-list__grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "pot1 pot1" "pot2 pot3";
+  }
+  .wedding-list__grid img:nth-of-type(1) {
+    grid-area: pot1;
+    width: 100%;
+  }
+  .wedding-list__grid img:nth-of-type(2) {
+    grid-area: pot2;
+  }
+  .wedding-list__grid img:nth-of-type(3) {
+    grid-area: pot3;
+  }
+}
+.contacts-wrapper {
+  min-height: calc(100vh - 90px);
+}
 
 /*# sourceMappingURL=style.css.map */
