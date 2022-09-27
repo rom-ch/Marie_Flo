@@ -14,7 +14,6 @@ function handleRadioClick() {
 
 	if (notAttending.checked) {
 		notAttending.value = 'Pas Présent';
-		console.log(notAttending.value);
 	}
 }
 
