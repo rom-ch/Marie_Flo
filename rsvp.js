@@ -2,12 +2,19 @@
 
 const attendWedding = document.querySelector('#attend-wedding');
 const guestInfo = document.querySelector('.guest-info');
+const notAttending = document.querySelector('#not-attend');
 
 function handleRadioClick() {
 	if (attendWedding.checked) {
 		guestInfo.style.display = 'flex';
+		attendWedding.value = 'Présent';
 	} else {
 		guestInfo.style.display = 'none';
+	}
+
+	if (notAttending.checked) {
+		notAttending.value = 'Présent';
+		console.log(notAttending.value);
 	}
 }
 
@@ -55,13 +62,22 @@ checkboxFood.addEventListener('click', () => {
 
 // Submit Form
 
-const scriptURL =
-	'https://script.google.com/macros/s/AKfycbyQ8KJWFkbhBU3N71A4dF87CjNicIk8zjmOe2rdvSMphUdQoBTu9Ul3QmnSoLvNxSt0/exec';
 const form = document.querySelector('.form');
+const submitButton = document.querySelector('.btn-submit');
+const scriptURL =
+	'https://script.google.com/macros/s/AKfycbzqNKBERaYkEorMT6pcPrR6R59sXlK45wzGuNFOxyGcsade1PXeyQ727aR2dOXafCtZfw/exec';
 
 form.addEventListener('submit', e => {
+	submitButton.disabled = true;
 	e.preventDefault();
-	fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-		.then(response => console.log('Success!', response))
-		.catch(error => console.error('Error!', error.message));
+	let requestBody = new FormData(form);
+	fetch(scriptURL, { method: 'POST', body: requestBody })
+		.then(response => {
+			alert('Success!', response);
+			submitButton.disabled = false;
+		})
+		.catch(error => {
+			alert('Error!', error.message);
+			submitButton.disabled = false;
+		});
 });

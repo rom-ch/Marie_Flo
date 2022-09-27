@@ -74,7 +74,12 @@
 			<section class="rsvp">
 				<!-- <img src="images/plant-1.webp" alt="" /> -->
 				<h2>RSVP</h2>
-				<form class="form" name="submit-rsvp">
+				<form
+					class="form"
+					name="submit-rsvp"
+					method="POST"
+					action="'https://script.google.com/macros/s/AKfycbyQ8KJWFkbhBU3N71A4dF87CjNicIk8zjmOe2rdvSMphUdQoBTu9Ul3QmnSoLvNxSt0/exec'"
+				>
 					<div class="name">
 						<div class="form__group">
 							<input
@@ -102,19 +107,19 @@
 
 					<div class="attend">
 						<label for="not-attend" class="radio">
-							<input type="radio" id="not-attend" name="attending" class="radio__input" />
+							<input type="radio" id="not-attend" name="Attending" class="radio__input" />
 							<span class="radio__radio"></span>
 							Ne pourra être présent au mariage
 						</label>
 
 						<label for="attend-wedding" class="radio">
-							<input type="radio" name="attending" id="attend-wedding" class="radio__input" />
+							<input type="radio" name="Attending" id="attend-wedding" class="radio__input" />
 							<span class="radio__radio"></span>
 							Sera présent au mariage
 						</label>
 
 						<div class="checkbox-container">
-							<input type="checkbox" id="attend-brunch" />
+							<input type="checkbox" id="attend-brunch" name="Brunch" />
 							<label for="attend-brunch" class="brunch"
 								>Sera présent pour le brunch du lendemin</label
 							>
@@ -126,7 +131,7 @@
 							<label for="nb-adult">Nombre d'adultes : </label>
 							<input
 								type="number"
-								name="nb-adult"
+								name="Adultes"
 								id="nb-adult"
 								min="1"
 								max="50"
@@ -138,7 +143,7 @@
 							<label for="nb-children">Nombre d'enfants (qui ont besoin d'un repas) : </label>
 							<input
 								type="number"
-								name="nb-children"
+								name="Children"
 								id="nb-children"
 								min="1"
 								max="50"
@@ -148,7 +153,7 @@
 						</div>
 
 						<div class="checkbox-container food-wrapper">
-							<input type="checkbox" id="food" name="food" />
+							<input type="checkbox" id="food" name="Food" />
 							<label for="food">Allergies & Restrictions alimentaires </label>
 						</div>
 						<div class="add-food form__group">
