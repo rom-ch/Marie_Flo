@@ -13,7 +13,7 @@ function handleRadioClick() {
 	}
 
 	if (notAttending.checked) {
-		notAttending.value = 'Présent';
+		notAttending.value = 'Pas Présent';
 		console.log(notAttending.value);
 	}
 }
