@@ -338,6 +338,8 @@ input[type=checkbox]#active {
 }
 .dresscode span img {
   width: 100px;
+  margin-block: 2rem;
+  margin-right: 1rem;
 }
 
 @media (max-width: 768px) {
@@ -369,9 +371,6 @@ input[type=checkbox]#active {
   }
   .dresscode-title {
     margin-top: 3rem;
-  }
-  .dresscode {
-    margin-block: 1rem 2rem;
   }
 }
 @media (min-width: 769px) and (max-width: 992px) {
@@ -954,6 +953,12 @@ input[type=number] {
   }
 }
 @media (max-width: 768px) {
+  .contacts-wrapper {
+    padding: 0;
+  }
+  .contacts {
+    width: 100%;
+  }
   .contacts__hero {
     max-width: 90%;
   }
@@ -965,6 +970,9 @@ input[type=number] {
     flex-direction: column;
     align-items: center;
     gap: 1rem;
+  }
+  .planner {
+    margin-bottom: 1rem;
   }
 }
 
