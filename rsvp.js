@@ -22,32 +22,15 @@ radioButtons.forEach(radio => {
 	radio.addEventListener('click', handleRadioClick);
 });
 
-// Create list when food is added
-
-const btnAdd = document.querySelector('.btn-add');
-const foodInput = document.querySelector('#food-input');
-const foodList = document.querySelector('.food-list');
-const deleteItem = document.querySelector('.list-item i');
-
-btnAdd.addEventListener('click', e => {
-	if (foodInput.value != '') {
-		const li = document.createElement('li');
-		li.className = 'list-item';
-		li.innerHTML = `
-		${foodInput.value}
-		<i class="fa-solid fa-xmark"></i>
-		`;
-		foodList.appendChild(li);
-		foodInput.value = '';
-
-		li.firstElementChild.addEventListener('click', e => {
-			li.remove();
-		});
+// Change Brunch value
+const attendBrunch = document.getElementById('attend-brunch');
+function handleBrunch() {
+	if (attendBrunch.checked) {
+		attendBrunch.value = 'Présent';
 	}
+}
 
-	e.preventDefault();
-});
-
+// Show/Hide food input
 const checkboxFood = document.querySelector('#food');
 const addFood = document.querySelector('.add-food');
 
@@ -57,6 +40,32 @@ checkboxFood.addEventListener('click', () => {
 	} else {
 		addFood.style.display = 'none';
 	}
+});
+
+// Create list when food is added
+const btnAdd = document.querySelector('.btn-add');
+const foodInput = document.querySelector('#food-input');
+const foodList = document.querySelector('.food-list');
+const deleteItem = document.querySelector('.list-item i');
+let foodValue = [];
+btnAdd.addEventListener('click', e => {
+	if (foodInput.value != '') {
+		const li = document.createElement('li');
+		li.className = 'list-item';
+		li.innerHTML = `
+		${foodInput.value}
+		<i class="fa-solid fa-xmark"></i>
+		`;
+		foodList.appendChild(li);
+		foodValue.push(foodInput.value);
+		foodInput.value = '';
+
+		li.firstElementChild.addEventListener('click', e => {
+			li.remove();
+		});
+	}
+	document.getElementById('food').value = foodValue;
+	e.preventDefault();
 });
 
 // Submit Form
@@ -69,10 +78,11 @@ const scriptURL =
 form.addEventListener('submit', e => {
 	submitButton.disabled = true;
 	e.preventDefault();
+	handleBrunch();
 	let requestBody = new FormData(form);
 	fetch(scriptURL, { method: 'POST', body: requestBody })
 		.then(response => {
-			alert('Success!', response);
+			alert('RSVP envoyé, RSVP sent', response);
 			submitButton.disabled = false;
 		})
 		.catch(error => {
