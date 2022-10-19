@@ -75,24 +75,24 @@
 
 .dresscode-title {
 	text-align: center;
-	margin-top: 5rem;
-}
-
-.dresscode {
+	margin-block: 2rem 1rem;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin-bottom: 3rem;
-	max-width: 90%;
+	gap: 1rem;
+
+	span {
+		width: 50px;
+	}
+}
+
+.dresscode {
+	padding: 1rem;
+	max-width: 600px;
 	margin: 0 auto;
 
-	span img {
-		width: 100px;
-		margin-block: 2rem;
-	}
-
 	p {
-		margin-left: 1rem;
+		margin-bottom: 0.5rem;
 	}
 }
 
@@ -127,10 +127,6 @@
 				aspect-ratio: 1/1;
 			}
 		}
-	}
-
-	.dresscode-title {
-		margin-top: 3rem;
 	}
 }
 

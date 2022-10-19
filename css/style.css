@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Karla:wght@300;400;500;600;700;800&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
 *,
 *::before,
@@ -141,7 +142,7 @@ input[type=checkbox]#active {
   justify-content: space-between;
 }
 .dropbtn i {
-  font-size: 18px;
+  font-size: 20px;
   color: #102f25;
 }
 
@@ -214,20 +215,63 @@ input[type=checkbox]#active {
   }
 }
 .footer {
-  padding-block: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1rem;
   background-color: rgb(245, 243, 243);
   color: #102f25;
-  font-size: 24px;
-  position: relative;
-}
-.footer h2 {
-  text-align: center;
 }
 .footer__link {
+  width: 100%;
   font-size: 12px;
-  float: left;
+}
+.footer__link-title {
+  font-size: 14px;
+}
+.footer__link a {
+  color: #102f25;
+  font-weight: 500;
+}
+.footer__title {
+  text-align: center;
+  font-size: 32px;
+  width: 100%;
+}
+.footer__contact {
+  color: black;
+  text-align: right;
+  width: 100%;
+}
+.footer__contact p {
+  font-size: 16px;
+  line-height: 1.3;
+  margin-bottom: 0.5rem;
+}
+.footer__contact a {
+  color: #102f25;
+  font-weight: 700;
 }
 
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .footer__link {
+    order: 3;
+    width: auto;
+  }
+  .footer__title {
+    order: 1;
+  }
+  .footer__contact {
+    text-align: center;
+    order: 2;
+  }
+}
 .btn {
   padding: 1rem 3rem;
   border: none;
@@ -358,23 +402,23 @@ input[type=checkbox]#active {
 
 .dresscode-title {
   text-align: center;
-  margin-top: 5rem;
-}
-
-.dresscode {
+  margin-block: 2rem 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 3rem;
-  max-width: 90%;
+  gap: 1rem;
+}
+.dresscode-title span {
+  width: 50px;
+}
+
+.dresscode {
+  padding: 1rem;
+  max-width: 600px;
   margin: 0 auto;
 }
-.dresscode span img {
-  width: 100px;
-  margin-block: 2rem;
-}
 .dresscode p {
-  margin-left: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 @media (max-width: 768px) {
@@ -404,9 +448,6 @@ input[type=checkbox]#active {
     width: 100%;
     aspect-ratio: 1/1;
   }
-  .dresscode-title {
-    margin-top: 3rem;
-  }
 }
 @media (min-width: 769px) and (max-width: 992px) {
   .infos-container {
@@ -418,7 +459,10 @@ input[type=checkbox]#active {
 }
 .localisation-wrapper {
   min-height: calc(100vh - 90px);
-  background-color: #ddd6d3;
+  background: url(./../../images/thumbnail_Petit\ wetto\ vue\ générale.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -426,9 +470,10 @@ input[type=checkbox]#active {
 }
 
 .localisation {
+  text-shadow: 0 0px 3px black;
   width: 950px;
   padding: 5rem 3rem;
-  background-color: #718879;
+  background-color: rgba(46, 77, 67, 0.7450980392);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -475,6 +520,7 @@ input[type=checkbox]#active {
     padding-inline: 0;
   }
   .localisation {
+    background-color: #718879;
     flex-direction: column;
     gap: 3rem;
     padding: 2rem 0.5rem;
@@ -893,8 +939,7 @@ input[type=number] {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   max-width: 900px;
   padding: 2rem;
-  margin-bottom: 2rem;
-  background-color: white;
+  background-color: rgba(196, 208, 205, 0.8);
 }
 .contacts__title {
   font-size: 2.5rem;
@@ -994,9 +1039,11 @@ input[type=number] {
 @media (max-width: 768px) {
   .contacts-wrapper {
     padding: 0;
+    background: none;
   }
   .contacts {
     width: 100%;
+    padding: 1rem;
   }
   .contacts__hero {
     max-width: 90%;
