@@ -1,16 +1,25 @@
 @use '../abstracts/' as *;
 
 .header {
-	height: 90px;
+	height: 100px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	padding-inline: 20px;
 	background-color: rgb(245, 243, 243);
 
-	h1 {
+	&__title {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
 		color: $clr-primary-400;
-		// margin-left: 20px;
+		margin-inline: 0.5rem;
+
+		h2 {
+			font-size: 1rem;
+		}
 	}
 }
 
@@ -95,14 +104,14 @@ input[type='checkbox']#active {
 .dropbtn {
 	border: 1px solid $clr-primary-900;
 	border-radius: 0.5rem;
-	padding: 0.3rem 0.3rem;
-	width: 40px;
+	padding: 0.5rem 0.5rem;
+	width: 60px;
 	cursor: pointer;
 	display: flex;
 	justify-content: space-between;
 
 	i {
-		font-size: 15px;
+		font-size: 18px;
 		color: $clr-primary-900;
 	}
 }
@@ -156,7 +165,29 @@ input[type='checkbox']#active {
 		padding-inline: 10px;
 
 		h1 {
-			font-size: 30px;
+			font-size: 25px;
+		}
+	}
+
+	.menu-btn {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 35px;
+		width: 35px;
+
+		i {
+			font-size: 1rem;
+		}
+	}
+
+	.dropbtn {
+		padding: 0.3rem 0.3rem;
+		width: 40px;
+
+		i {
+			font-size: 15px;
+			color: $clr-primary-900;
 		}
 	}
 }

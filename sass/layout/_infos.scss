@@ -30,6 +30,7 @@
 
 	&__icon {
 		width: 100px;
+		height: 100px;
 	}
 }
 
@@ -88,7 +89,10 @@
 	span img {
 		width: 100px;
 		margin-block: 2rem;
-		margin-right: 1rem;
+	}
+
+	p {
+		margin-left: 1rem;
 	}
 }
 

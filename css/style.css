@@ -40,15 +40,24 @@ img {
 }
 
 .header {
-  height: 90px;
+  height: 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-inline: 20px;
   background-color: rgb(245, 243, 243);
 }
-.header h1 {
+.header__title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   color: #2e4d43;
+  margin-inline: 0.5rem;
+}
+.header__title h2 {
+  font-size: 1rem;
 }
 
 .navbar {
@@ -125,14 +134,14 @@ input[type=checkbox]#active {
 .dropbtn {
   border: 1px solid #102f25;
   border-radius: 0.5rem;
-  padding: 0.3rem 0.3rem;
-  width: 40px;
+  padding: 0.5rem 0.5rem;
+  width: 60px;
   cursor: pointer;
   display: flex;
   justify-content: space-between;
 }
 .dropbtn i {
-  font-size: 15px;
+  font-size: 18px;
   color: #102f25;
 }
 
@@ -183,17 +192,40 @@ input[type=checkbox]#active {
     padding-inline: 10px;
   }
   .header h1 {
-    font-size: 30px;
+    font-size: 25px;
+  }
+  .menu-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    width: 35px;
+  }
+  .menu-btn i {
+    font-size: 1rem;
+  }
+  .dropbtn {
+    padding: 0.3rem 0.3rem;
+    width: 40px;
+  }
+  .dropbtn i {
+    font-size: 15px;
+    color: #102f25;
   }
 }
 .footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   padding-block: 2rem;
   background-color: rgb(245, 243, 243);
   color: #102f25;
   font-size: 24px;
+  position: relative;
+}
+.footer h2 {
+  text-align: center;
+}
+.footer__link {
+  font-size: 12px;
+  float: left;
 }
 
 .btn {
@@ -291,6 +323,7 @@ input[type=checkbox]#active {
 }
 .info__icon {
   width: 100px;
+  height: 100px;
 }
 
 .caroussel {
@@ -339,7 +372,9 @@ input[type=checkbox]#active {
 .dresscode span img {
   width: 100px;
   margin-block: 2rem;
-  margin-right: 1rem;
+}
+.dresscode p {
+  margin-left: 1rem;
 }
 
 @media (max-width: 768px) {
@@ -843,7 +878,10 @@ input[type=number] {
 }
 .contacts-wrapper {
   min-height: calc(100vh - 90px);
-  background-color: #c4d0cd;
+  background: url("../../images/dan-meyers-IQVFVH0ajag-unsplash.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
   padding: 2rem;
   display: flex;
   flex-direction: column;
@@ -856,6 +894,7 @@ input[type=number] {
   max-width: 900px;
   padding: 2rem;
   margin-bottom: 2rem;
+  background-color: white;
 }
 .contacts__title {
   font-size: 2.5rem;

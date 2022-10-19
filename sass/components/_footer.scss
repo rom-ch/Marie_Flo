@@ -1,11 +1,21 @@
 @use '../abstracts/' as *;
 
 .footer {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	// display: flex;
+	// justify-content: center;
+	// align-items: center;
 	padding-block: 2rem;
 	background-color: rgb(245, 243, 243);
 	color: $clr-primary-900;
 	font-size: 24px;
+	position: relative;
+
+	h2 {
+		text-align: center;
+	}
+
+	&__link {
+		font-size: 12px;
+		float: left;
+	}
 }
