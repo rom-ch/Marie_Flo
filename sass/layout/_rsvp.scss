@@ -365,3 +365,17 @@ input[type='number'] {
 		}
 	}
 }
+
+.second-part {
+	margin-block: 0.5rem 2rem;
+	border-top: 1px solid #ddd6d3;
+	// border: 1px solid red;
+
+	h3 {
+		margin-top: 1.5rem;
+	}
+
+	.form__group {
+		margin-top: 0;
+	}
+}

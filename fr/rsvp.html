@@ -11,7 +11,8 @@
 			crossorigin="anonymous"
 			referrerpolicy="no-referrer"
 		/>
-		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="./../css/style.css" />
+
 		<title>Marie & Florent - RSVP</title>
 	</head>
 	<body>
@@ -22,12 +23,12 @@
 					<i class="fa-solid fa-caret-down"></i>
 				</button>
 				<div class="dropdown-content">
-					<a href="infos.html">
-						<img src="images/fr.svg" alt="#" />
+					<a href="rsvp.html">
+						<img src="./../images/fr.svg" alt="#" />
 						Français
 					</a>
-					<a href="infos_en.html">
-						<img src="images/us.svg" alt="#" />
+					<a href="./../eng/rsvp_en.html">
+						<img src="./../images/us.svg" alt="#" />
 						English
 					</a>
 				</div>
@@ -52,13 +53,13 @@
 						<a href="rsvp.html" class="nav-link">RSVP</a>
 					</li>
 					<li class="nav-item">
-						<a href="#" class="nav-link">Où dormir?</a>
+						<a href="hotels.html" class="nav-link">Où dormir?</a>
 					</li>
 					<li class="nav-item">
 						<a href="localisation.html" class="nav-link">Comment venir?</a>
 					</li>
 					<li class="nav-item">
-						<a href="#" class="nav-link">Planning</a>
+						<a href="planning.html" class="nav-link">Planning</a>
 					</li>
 					<li class="nav-item">
 						<a href="liste_de_mariage.html" class="nav-link"
@@ -66,7 +67,7 @@
 						>
 					</li>
 					<li class="nav-item">
-						<a href="#" class="nav-link">DJ</a>
+						<a href="dj.html" class="nav-link">DJ</a>
 					</li>
 					<li class="nav-item">
 						<a href="contacts.html" class="nav-link">Contacts</a>
@@ -85,64 +86,64 @@
 					method="POST"
 					action="'https://script.google.com/macros/s/AKfycbyQ8KJWFkbhBU3N71A4dF87CjNicIk8zjmOe2rdvSMphUdQoBTu9Ul3QmnSoLvNxSt0/exec'"
 				>
-					<div class="name">
-						<div class="form__group">
-							<input
-								type="text"
-								name="Nom"
-								id="lname"
-								class="form__field"
-								placeholder="Nom"
-								required
-							/>
-							<label for="lname" class="form__label">Nom</label>
+					<div class="first-part">
+						<div class="name">
+							<div class="form__group">
+								<input
+									type="text"
+									name="Nom"
+									id="lname"
+									class="form__field"
+									placeholder="Nom"
+									required
+								/>
+								<label for="lname" class="form__label">Nom</label>
+							</div>
+							<div class="form__group">
+								<input
+									type="text"
+									name="Prénom"
+									id="fname"
+									class="form__field"
+									placeholder="Prénom"
+									required
+								/>
+								<label for="fname" class="form__label">Prénom</label>
+							</div>
 						</div>
-						<div class="form__group">
-							<input
-								type="text"
-								name="Prénom"
-								id="fname"
-								class="form__field"
-								placeholder="Prénom"
-								required
-							/>
-							<label for="fname" class="form__label">Prénom</label>
-						</div>
-					</div>
-
-					<div class="attend">
-						<label for="not-attend" class="radio">
-							<input
-								type="radio"
-								id="not-attend"
-								name="Attending"
-								class="radio__input"
-							/>
-							<span class="radio__radio"></span>
-							Ne pourra être présent au mariage
-						</label>
-
-						<label for="attend-wedding" class="radio">
-							<input
-								type="radio"
-								name="Attending"
-								id="attend-wedding"
-								class="radio__input"
-							/>
-							<span class="radio__radio"></span>
-							Sera présent au mariage
-						</label>
-
-						<div class="checkbox-container">
-							<input
-								type="checkbox"
-								id="attend-brunch"
-								name="Brunch"
-								value=""
-							/>
-							<label for="attend-brunch" class="brunch"
-								>Sera présent pour le brunch du lendemin</label
-							>
+						<div class="attend">
+							<label for="not-attend" class="radio">
+								<input
+									type="radio"
+									id="not-attend"
+									name="Attending"
+									class="radio__input"
+								/>
+								<span class="radio__radio"></span>
+								Ne pourra être présent au mariage
+							</label>
+							<label for="attend-wedding" class="radio">
+								<input
+									type="radio"
+									name="Attending"
+									id="attend-wedding"
+									class="radio__input"
+								/>
+								<span class="radio__radio"></span>
+								Sera présent au mariage
+							</label>
+							<div class="checkbox-container">
+								<input
+									type="checkbox"
+									id="attend-brunch"
+									class="attend-brunch"
+									name="Brunch"
+									value=""
+								/>
+								<label for="attend-brunch" class="brunch"
+									>Sera présent pour le brunch du lendemin</label
+								>
+							</div>
 						</div>
 					</div>
 
@@ -175,8 +176,8 @@
 						</div>
 
 						<div class="checkbox-container food-wrapper">
-							<input type="checkbox" id="food" name="Food" />
-							<label for="food">Allergies & Restrictions alimentaires </label>
+							<input type="checkbox" id="food" name="Food" data-food />
+							<label for="food">Allergies & régimes alimentaires </label>
 						</div>
 						<div class="add-food form__group">
 							<input
@@ -185,12 +186,74 @@
 								id="food-input"
 								class="form__field"
 								placeholder="Ajouter ici"
+								data-food-input
 							/>
 							<button class="btn-form btn-add">Ajouter</button>
 						</div>
 					</div>
 
 					<ul class="food-list"></ul>
+
+					<!-- <div class="second-part">
+						<h3>Adult N.1</h3>
+						<div class="name">
+							<div class="form__group">
+								<input
+									type="text"
+									name="Nom1"
+									id="lname1"
+									class="form__field"
+									placeholder="Nom"
+									required
+								/>
+								<label for="lname1" class="form__label">Nom</label>
+							</div>
+							<div class="form__group">
+								<input
+									type="text"
+									name="Prénom1"
+									id="fname1"
+									class="form__field"
+									placeholder="Prénom"
+									required
+								/>
+								<label for="fname1" class="form__label">Prénom</label>
+							</div>
+						</div>
+						<div class="attend">
+							<div class="checkbox-container">
+								<input
+									type="checkbox"
+									id="attend-brunch1"
+									name="Brunch"
+									value=""
+								/>
+								<label for="attend-brunch1" class="brunch"
+									>Sera présent pour le brunch du lendemin</label
+								>
+							</div>
+						</div>
+
+						<div class="checkbox-container food-wrapper">
+							<input type="checkbox" id="food1" name="Food" data-food />
+							<label for="food1">Allergies & régimes alimentaires </label>
+						</div>
+						<div class="add-food form__group">
+							<input
+								type="text"
+								name="add"
+								id="food-input"
+								class="form__field"
+								placeholder="Ajouter ici"
+								data-food-input
+							/>
+							<button class="btn-form btn-add">Ajouter</button>
+						</div>
+					</div>
+
+					<ul class="food-list"></ul>
+					</div> -->
+
 					<button class="btn-form btn-submit" type="submit">Envoyer</button>
 				</form>
 			</section>
@@ -211,6 +274,6 @@
 			</div>
 		</footer>
 
-		<script src="rsvp.js"></script>
+		<script src="./../js/rsvp.js"></script>
 	</body>
 </html>

@@ -11,7 +11,7 @@
 			crossorigin="anonymous"
 			referrerpolicy="no-referrer"
 		/>
-		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="./../css/style.css" />
 		<title>Marie & Florent - Contacts</title>
 	</head>
 	<body>
@@ -22,20 +22,17 @@
 					<i class="fa-solid fa-caret-down"></i>
 				</button>
 				<div class="dropdown-content">
-					<a href="infos.html">
-						<img src="images/fr.svg" alt="#" />
+					<a href="./../fr/hotels.html">
+						<img src="./../images/fr.svg" alt="#" />
 						Français
 					</a>
-					<a href="infos_en.html">
-						<img src="images/us.svg" alt="#" />
+					<a href="hotels_en.html">
+						<img src="./../images/us.svg" alt="#" />
 						English
 					</a>
 				</div>
 			</div>
-			<div class="header__title">
-				<h1>Mariage Marie & Florent</h1>
-				<h2>6 Mai 2023</h2>
-			</div>
+			<h1>Marie & Florent</h1>
 			<input type="checkbox" id="active" />
 			<label for="active" class="menu-btn"
 				><i class="fa-solid fa-bars"></i
@@ -43,57 +40,60 @@
 			<nav class="navbar">
 				<ul class="nav-menu">
 					<li class="nav-item">
-						<a href="index.html" class="nav-link">Accueil</a>
+						<a href="index_en.html" class="nav-link">Home</a>
 					</li>
 					<li class="nav-item">
-						<a href="infos.html" class="nav-link">Infos Générales</a>
+						<a href="infos_en.html" class="nav-link">General Informations</a>
 					</li>
 					<li class="nav-item">
-						<a href="rsvp.html" class="nav-link">RSVP</a>
+						<a href="rsvp_en.html" class="nav-link">RSVP</a>
 					</li>
 					<li class="nav-item">
-						<a href="#" class="nav-link">Où dormir?</a>
+						<a href="hotels_en.html" class="nav-link">Where to sleep?</a>
 					</li>
 					<li class="nav-item">
-						<a href="localisation.html" class="nav-link">Comment venir?</a>
-					</li>
-					<li class="nav-item">
-						<a href="#" class="nav-link">Planning</a>
-					</li>
-					<li class="nav-item">
-						<a href="liste_de_mariage.html" class="nav-link"
-							>Liste de mariage</a
+						<a href="localisation_en.html" class="nav-link"
+							>How to get there?</a
 						>
 					</li>
 					<li class="nav-item">
-						<a href="#" class="nav-link">DJ</a>
+						<a href="planning_en.html" class="nav-link">Schedule</a>
 					</li>
 					<li class="nav-item">
-						<a href="contacts.html" class="nav-link">Contacts</a>
+						<a href="liste_de_mariage_en.html" class="nav-link">Wedding list</a>
+					</li>
+					<li class="nav-item">
+						<a href="dj_en.html" class="nav-link">DJ</a>
+					</li>
+					<li class="nav-item">
+						<a href="contacts_en.html" class="nav-link">Contacts</a>
 					</li>
 				</ul>
 			</nav>
 		</header>
 
 		<main class="hotels-wrapper">
-			<h2 class="hotels-wrapper__title">Où dormir?</h2>
+			<h2 class="hotels-wrapper__title">Where to sleep?</h2>
 			<section class="hotel-container">
 				<figure class="hotel">
 					<div class="hotel__img">
-						<img src="./images/AubergeAlsacienne_eguisheim.webp" alt="#" />
+						<img src="./../images/AubergeAlsacienne_eguisheim.webp" alt="#" />
 					</div>
 					<figcaption class="hotel__content">
 						<div class="hotel__content-text">
 							<h2>Auberge Alsacienne</h2>
-							<p>12 Grand-Rue, 68420 Eguisheim</p>
+							<div class="hotel-address">
+								<p>12 Grand-Rue, 68420</p>
+								<p><strong>Eguisheim</strong></p>
+							</div>
 							<a href="https://www.auberge-alsacienne.net/" target="_blank"
-								>Réserver</a
+								>Book</a
 							>
 						</div>
 						<div class="hotel__content-legend">
 							<div class="legend legend-phone">
 								<i class="fa-solid fa-phone"></i>
-								03 89 41 50 20
+								+33 3 89 41 50 20
 							</div>
 							<div class="legend legend-walk">
 								<i class="fa-solid fa-person-walking"></i>
@@ -105,20 +105,21 @@
 
 				<figure class="hotel">
 					<div class="hotel__img">
-						<img src="./images/Hameau_eguisheim.webp" alt="#" />
+						<img src="./../images/Hameau_eguisheim.webp" alt="#" />
 					</div>
 					<figcaption class="hotel__content">
 						<div class="hotel__content-text">
 							<h2>Le Hameau d'Eguisheim</h2>
-							<p>33 Grand-Rue, 68420 Eguisheim</p>
-							<a href="https://hameau-eguisheim.com/" target="_blank"
-								>Réserver</a
-							>
+							<div class="hotel-address">
+								<p>33 Grand-Rue, 68420</p>
+								<p><strong>Eguisheim</strong></p>
+							</div>
+							<a href="https://hameau-eguisheim.com/" target="_blank">Book</a>
 						</div>
 						<div class="hotel__content-legend">
 							<div class="legend legend-phone">
 								<i class="fa-solid fa-phone"></i>
-								03 89 24 18 66
+								+33 3 89 24 18 66
 							</div>
 							<div class="legend legend-walk">
 								<i class="fa-solid fa-person-walking"></i>
@@ -130,22 +131,25 @@
 
 				<figure class="hotel">
 					<div class="hotel__img">
-						<img src="./images/hostellerieChateau_eguisheim.webp" alt="#" />
+						<img src="./../images/hostellerieChateau_eguisheim.webp" alt="#" />
 					</div>
 					<figcaption class="hotel__content">
 						<div class="hotel__content-text">
 							<h2>Hostellerie Du Château</h2>
-							<p>2 Rue du Château, 68420 Eguisheim</p>
+							<div class="hotel-address">
+								<p>2 Rue du Château, 68420</p>
+								<p><strong>Eguisheim</strong></p>
+							</div>
 							<a
 								href="https://www.eguisheim-hostellerie-du-chateau.fr/"
 								target="_blank"
-								>Réserver</a
+								>Book</a
 							>
 						</div>
 						<div class="hotel__content-legend">
 							<div class="legend legend-phone">
 								<i class="fa-solid fa-phone"></i>
-								03 89 23 72 00
+								+33 3 89 23 72 00
 							</div>
 							<div class="legend legend-walk">
 								<i class="fa-solid fa-person-walking"></i>
@@ -157,22 +161,25 @@
 
 				<figure class="hotel">
 					<div class="hotel__img">
-						<img src="./images/HotelSoleil_wetto.webp" alt="#" />
+						<img src="./../images/HotelSoleil_wetto.webp" alt="#" />
 					</div>
 					<figcaption class="hotel__content">
 						<div class="hotel__content-text">
 							<h2>Hôtel Au Soleil</h2>
-							<p>20 Rue Sainte-Gertrude, 68920 Wettolsheim</p>
+							<div class="hotel-address">
+								<p>20 Rue Sainte-Gertrude, 68920</p>
+								<p><strong>Wettolsheim</strong></p>
+							</div>
 							<a
 								href="https://www.hotel-restaurant-au-soleil.fr/"
 								target="_blank"
-								>Réserver</a
+								>Book</a
 							>
 						</div>
 						<div class="hotel__content-legend">
 							<div class="legend legend-phone">
 								<i class="fa-solid fa-phone"></i>
-								03 89 80 62 66
+								+33 3 89 80 62 66
 							</div>
 							<div class="legend legend-walk">
 								<i class="fa-solid fa-person-walking"></i>
@@ -184,20 +191,23 @@
 
 				<figure class="hotel">
 					<div class="hotel__img">
-						<img src="./images/JamesVIgnoble_eguisheim.webp" alt="#" />
+						<img src="./../images/JamesVIgnoble_eguisheim.webp" alt="#" />
 					</div>
 					<figcaption class="hotel__content">
 						<div class="hotel__content-text">
 							<h2>James Vignoble Hôtel</h2>
-							<p>6 Rue des Trois Pierres, 68420 Eguisheim</p>
+							<div class="hotel-address">
+								<p>6 Rue des Trois Pierres, 68420</p>
+								<p><strong>Eguisheim</strong></p>
+							</div>
 							<a href="https://www.jameshotel-vignoble.com/fr/" target="_blank"
-								>Réserver</a
+								>Book</a
 							>
 						</div>
 						<div class="hotel__content-legend">
 							<div class="legend legend-phone">
 								<i class="fa-solid fa-phone"></i>
-								03 89 41 46 88
+								+33 3 89 41 46 88
 							</div>
 							<div class="legend legend-walk">
 								<i class="fa-solid fa-person-walking"></i>
@@ -209,18 +219,21 @@
 
 				<figure class="hotel">
 					<div class="hotel__img">
-						<img src="./images/LaPalette_wetto.webp" alt="#" />
+						<img src="./../images/LaPalette_wetto.webp" alt="#" />
 					</div>
 					<figcaption class="hotel__content">
 						<div class="hotel__content-text">
 							<h2>La Palette</h2>
-							<p>9 rue de Herzog 68920 Wettolsheim</p>
-							<a href="https://www.lapalette.fr/" target="_blank">Réserver</a>
+							<div class="hotel-address">
+								<p>9 rue de Herzog, 68920</p>
+								<p><strong>Wettolsheim</strong></p>
+							</div>
+							<a href="https://www.lapalette.fr/" target="_blank">Book</a>
 						</div>
 						<div class="hotel__content-legend">
 							<div class="legend legend-phone">
 								<i class="fa-solid fa-phone"></i>
-								03 89 80 79 14
+								+33 3 89 80 79 14
 							</div>
 							<div class="legend legend-walk">
 								<i class="fa-solid fa-person-walking"></i>
@@ -246,7 +259,5 @@
 				>
 			</div>
 		</footer>
-
-		<script src="contacts.js"></script>
 	</body>
 </html>
