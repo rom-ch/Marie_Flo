@@ -11,8 +11,15 @@ phoneButtons.forEach(phoneButton => {
 const phoneNumbers = document.querySelectorAll('.contact-number');
 
 phoneNumbers.forEach(phoneNumber => {
-	phoneNumber.addEventListener('click', () => {
-		navigator.clipboard.writeText(phoneNumber.innerHTML);
-		console.log(phoneNumber);
-	});
+	if (window.innerWidth >= 768) {
+		phoneNumber.attributes.href.value = '#';
+	}
 });
+
+// function copyText() {
+// 	phoneNumbers.forEach(phoneNumber => {
+// 		phoneNumber.addEventListener('click', () => {
+// 			navigator.clipboard.writeText('hello');
+// 		});
+// 	});
+// }

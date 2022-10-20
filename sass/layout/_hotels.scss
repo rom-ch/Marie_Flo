@@ -1,0 +1,176 @@
+@use '../abstracts/' as *;
+
+.hotels-wrapper {
+	background-color: $clr-primary-100;
+	padding: 2rem;
+
+	&__title {
+		font-size: 32px;
+		text-align: center;
+		margin-bottom: 1rem;
+	}
+}
+
+.hotel-container {
+	// max-width: 1600px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-areas:
+		'card1 card2 card3'
+		'card4 card5 card6';
+	gap: 2rem;
+	place-items: center;
+}
+
+.hotel:nth-of-type(1) {
+	grid-area: card1;
+}
+
+.hotel:nth-of-type(2) {
+	grid-area: card2;
+}
+
+.hotel:nth-of-type(3) {
+	grid-area: card3;
+}
+
+.hotel:nth-of-type(4) {
+	grid-area: card4;
+}
+
+.hotel:nth-of-type(5) {
+	grid-area: card5;
+}
+
+.hotel:nth-of-type(6) {
+	grid-area: card6;
+}
+
+.hotel {
+	background-color: white;
+	border-radius: 10px;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	overflow: hidden;
+	width: 70%;
+	// height: 100%;
+	min-width: 350px;
+
+	&__img {
+		width: 100%;
+		height: 0;
+		padding-top: calc(100% * 9 / 16);
+		position: relative;
+
+		img {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			object-fit: cover;
+		}
+	}
+}
+
+// .hotel__content {
+// 	height: 100%;
+// }
+
+.hotel__content-text {
+	padding: 1rem 1rem 0 1rem;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	align-items: center;
+	gap: 1rem;
+
+	h2 {
+		color: $clr-primary-900;
+	}
+
+	a {
+		background-color: white;
+		color: $clr-primary-400;
+		border: 2px solid $clr-primary-400;
+		padding: 1rem 2rem;
+		border-radius: 50px;
+		font-weight: 700;
+		transition: 0.2s ease-in-out;
+		margin-block: 0.5rem;
+
+		&:hover {
+			background-color: rgb($clr-primary-400, 0.9);
+			color: white;
+		}
+
+		&:focus {
+			box-shadow: 0 0 8px $clr-primary-400;
+		}
+	}
+}
+
+.hotel__content-legend {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem;
+	width: 100%;
+
+	.legend {
+		// color: white;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		i {
+			margin-right: 1rem;
+			font-size: 18px;
+		}
+	}
+
+	.legend-phone {
+		border-right: 1px solid black;
+		width: 65%;
+
+		// i {
+		// 	margin-right: 0.5rem;
+		// }
+	}
+
+	.legend-walk {
+		width: 30%;
+	}
+}
+
+@media (max-width: 1200px) {
+	.hotel-container {
+		grid-template-columns: 1fr 1fr;
+		grid-template-areas:
+			'card1 card2'
+			'card3 card4'
+			'card5 card6';
+		gap: 2rem 1rem;
+	}
+}
+
+@media (max-width: 800px) {
+	.hotels-wrapper {
+		padding-inline: 0.5rem;
+	}
+
+	.hotel-container {
+		grid-template-columns: 1fr;
+		grid-template-areas:
+			'card1'
+			'card2'
+			'card3'
+			'card4'
+			'card5'
+			'card6';
+		gap: 2rem 1rem;
+	}
+
+	.hotel {
+		width: 70%;
+	}
+}
