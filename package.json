@@ -1,0 +1,25 @@
+{
+	"name": "marie_flo",
+	"version": "1.0.0",
+	"description": "Site de mariage Marie et Florent",
+	"main": "index.js",
+	"scripts": {
+		"start": "sass --watch sass/main.scss:css/style.css",
+		"prefix": "postcss ./css/style.css --use autoprefixer -d ./prefstyle.css"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/rom-ch/Marie_Flo.git"
+	},
+	"author": "Romain",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/rom-ch/Marie_Flo/issues"
+	},
+	"homepage": "https://github.com/rom-ch/Marie_Flo#readme",
+	"dependencies": {
+		"autoprefixer": "^10.4.12",
+		"postcss": "^8.4.18",
+		"postcss-cli": "^10.0.0"
+	}
+}

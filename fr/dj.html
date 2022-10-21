@@ -78,6 +78,31 @@
 
 		<main>
 			<section class="dj">
+				<div class="dj__hero">
+					<h2 class="dj__title">
+						Musique
+						<i class="fa-solid fa-music"></i>
+					</h2>
+					<p>Proposez de la musique pour la réception!</p>
+				</div>
+				<form class="music">
+					<div class="form-group">
+						<div class="form-group-field">
+							<label for="artist">Artiste</label>
+							<input
+								type="text"
+								id="artist"
+								name="Artist"
+								placeholder="Artiste"
+							/>
+						</div>
+						<div class="form-group-field">
+							<label for="track">Chanson</label>
+							<input type="text" id="track" name="Track" placeholder="Track" />
+						</div>
+					</div>
+					<button class="btn-music-submit" type="submit">Ajouter</button>
+				</form>
 				<iframe
 					src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTae_t6ENT8z0XdPOJrykogV5nZjTJh5Izkc1D0oy-cm5hueCpoiZN6rizDLPIyXQb_95baaxiPqwOK/pubhtml?gid=0&amp;single=true&amp;widget=false&amp;headers=false&amp;chrome=false"
 				></iframe>
@@ -98,5 +123,7 @@
 				>
 			</div>
 		</footer>
+
+		<script src="./../js/dj.js"></script>
 	</body>
 </html>
