@@ -85,20 +85,25 @@
 					</h2>
 					<p>Proposez de la musique pour la réception!</p>
 				</div>
-				<form class="music">
+				<form
+					class="music"
+					name="submit-track"
+					method="POST"
+					action="https://script.google.com/macros/s/AKfycbzQRB4J4AIBOoJ5yFk58VFg4A-fgWOKSVBIf15tTOchr0CMQT9DTuoZJJ0VWwSZHqW5Lg/exec"
+				>
 					<div class="form-group">
 						<div class="form-group-field">
 							<label for="artist">Artiste</label>
 							<input
 								type="text"
 								id="artist"
-								name="Artist"
+								name="Artists"
 								placeholder="Artiste"
 							/>
 						</div>
 						<div class="form-group-field">
 							<label for="track">Chanson</label>
-							<input type="text" id="track" name="Track" placeholder="Track" />
+							<input type="text" id="track" name="Tracks" placeholder="Track" />
 						</div>
 					</div>
 					<button class="btn-music-submit" type="submit">Ajouter</button>
