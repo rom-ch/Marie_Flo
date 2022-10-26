@@ -2,10 +2,11 @@
 
 .rsvp-wrapper {
 	min-height: calc(100vh - 90px);
-	background-image: url('../images/pawel-czerwinski-qzaIDFtzcZ0-unsplash.webp');
+	background-color: $clr-primary-100;
+	background-image: url('../../images/henry-co--odUkx8C2gg-unsplash.jpg');
 	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
+	background-size: contain;
+	background-position: left;
 }
 
 .rsvp {
@@ -143,7 +144,6 @@
 .form__group {
 	position: relative;
 	padding: 15px 0 0;
-	margin-top: 10px;
 	width: 50%;
 }
 
@@ -293,7 +293,7 @@
 	border: 2px solid $clr-primary-900;
 	outline: 0;
 	border-radius: 0.3rem;
-	width: 35px;
+	width: 55px;
 	padding: 0.2rem 0.4rem;
 	background-color: $clr-primary-300;
 	color: $clr-secondary-100;
@@ -314,16 +314,16 @@
 }
 
 /* Chrome, Safari, Edge, Opera */
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-	-webkit-appearance: none;
-	margin: 0;
-}
+// input::-webkit-outer-spin-button,
+// input::-webkit-inner-spin-button {
+// 	-webkit-appearance: none;
+// 	margin: 0;
+// }
 
-/* Firefox */
-input[type='number'] {
-	-moz-appearance: textfield;
-}
+// /* Firefox */
+// input[type='number'] {
+// 	-moz-appearance: textfield;
+// }
 
 // Button Sbmit style
 
@@ -364,9 +364,14 @@ input[type='number'] {
 			padding: 1rem;
 		}
 	}
+
+	.form input[type='number'] {
+		width: 35px;
+	}
 }
 
-.second-part {
+.second-part-enfant,
+.second-part-adulte {
 	margin-block: 0.5rem 2rem;
 	border-top: 1px solid #ddd6d3;
 	// border: 1px solid red;
@@ -375,7 +380,7 @@ input[type='number'] {
 		margin-top: 1.5rem;
 	}
 
-	.form__group {
-		margin-top: 0;
+	.add-food {
+		margin-top: 1rem;
 	}
 }

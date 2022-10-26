@@ -532,10 +532,11 @@ input[type=checkbox]#active {
 }
 .rsvp-wrapper {
   min-height: calc(100vh - 90px);
-  background-image: url("../images/pawel-czerwinski-qzaIDFtzcZ0-unsplash.webp");
+  background-color: #c4d0cd;
+  background-image: url("../../images/henry-co--odUkx8C2gg-unsplash.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  background-size: contain;
+  background-position: left;
 }
 
 .rsvp {
@@ -651,7 +652,6 @@ input[type=checkbox]#active {
 .form__group {
   position: relative;
   padding: 15px 0 0;
-  margin-top: 10px;
   width: 50%;
 }
 
@@ -777,7 +777,7 @@ input[type=checkbox]#active {
   border: 2px solid #102f25;
   outline: 0;
   border-radius: 0.3rem;
-  width: 35px;
+  width: 55px;
   padding: 0.2rem 0.4rem;
   background-color: #718879;
   color: #ddd6d3;
@@ -795,17 +795,6 @@ input[type=checkbox]#active {
 }
 
 /* Chrome, Safari, Edge, Opera */
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-/* Firefox */
-input[type=number] {
-  -moz-appearance: textfield;
-}
-
 .btn-form {
   border: none;
   outline: none;
@@ -839,16 +828,22 @@ input[type=number] {
     width: 100%;
     padding: 1rem;
   }
+  .form input[type=number] {
+    width: 35px;
+  }
 }
-.second-part {
+.second-part-enfant,
+.second-part-adulte {
   margin-block: 0.5rem 2rem;
   border-top: 1px solid #ddd6d3;
 }
-.second-part h3 {
+.second-part-enfant h3,
+.second-part-adulte h3 {
   margin-top: 1.5rem;
 }
-.second-part .form__group {
-  margin-top: 0;
+.second-part-enfant .add-food,
+.second-part-adulte .add-food {
+  margin-top: 1rem;
 }
 
 .wedding-list {

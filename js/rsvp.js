@@ -35,56 +35,57 @@ function handleBrunch() {
 
 const addMoreFields = function (i, genre) {
 	const html = `
-	<div class="second-part">
+	<div class="second-part-${genre.toLowerCase()}">
+						<div class="second-part-inwrapper">
 							<h3>${genre} + ${i}</h3>
 							<div class="name">
 								<div class="form__group">
 									<input
 										type="text"
-										name="Nom${i}"
-										id="lname${i}"
+										name="${genre[0].toUpperCase()}${i}-Nom"
+										id="${genre[0].toUpperCase()}${i}-lname"
 										class="form__field"
 										placeholder="Nom"
 										required
 									/>
-									<label for="lname${i}" class="form__label">Nom</label>
+									<label for="${genre[0].toUpperCase()}${i}-lname" class="form__label">Nom</label>
 								</div>
 								<div class="form__group">
 									<input
 										type="text"
-										name="Prénom${i}"
-										id="fname${i}"
+										name="${genre[0].toUpperCase()}${i}-Prénom"
+										id="${genre[0].toUpperCase()}${i}-fname"
 										class="form__field"
 										placeholder="Prénom"
 										required
 									/>
-									<label for="fname${i}" class="form__label">Prénom</label>
+									<label for="${genre[0].toUpperCase()}${i}-fname" class="form__label">Prénom</label>
 								</div>
 							</div>
 							<div class="attend">
 								<div class="checkbox-container">
 									<input
 										type="checkbox"
-										id="attend-brunch${i}"
+										id="${genre[0].toUpperCase()}-attend-brunch${i}"
 										class="attend-brunch"
-										name="Brunch${i}"
+										name="${genre[0].toUpperCase()}${i}-Brunch"
 										value=""
 									/>
-									<label for="attend-brunch${i}" class="brunch"
+									<label for="${genre[0].toUpperCase()}-attend-brunch${i}" class="brunch"
 										>Sera présent pour le brunch du lendemin</label
 									>
 								</div>
 
 							</div>
 							<div class="checkbox-container food-wrapper">
-							<input type="checkbox" id="food${i}" name="Food${i}" data-food />
-							<label for="food${i}">Allergies & régimes alimentaires </label>
+							<input type="checkbox" id="${genre[0].toUpperCase()}${i}-food" name="${genre[0].toUpperCase()}${i}-Food" data-food />
+							<label for="${genre[0].toUpperCase()}${i}-food">Allergies & régimes alimentaires </label>
 						</div>
 						<div class="add-food form__group">
 							<input
 								type="text"
 								name="add"
-								id="food-input"
+								id="${genre[0].toUpperCase()}${i}-food-input"
 								class="form__field"
 								placeholder="Ajouter ici"
 								data-food-input
@@ -94,37 +95,52 @@ const addMoreFields = function (i, genre) {
 					</div>
 
 					<ul class="food-list"></ul>
-					</div>
+				</div>
+</div>
 	`;
 
-	document.querySelector('.btn-submit').insertAdjacentHTML('beforebegin', html);
+	document
+		.querySelector('.second-part-wrapper')
+		.insertAdjacentHTML('beforeend', html);
+
+	showAllergies();
+	createListAllergies(i, genre);
+	handleBrunch();
 };
 
 // Show others adults and children fields
 const adultNumber = document.querySelector('#nb-adult');
 const childNumber = document.querySelector('#nb-children');
+const secondPartWrapper = document.querySelector('.second-part-wrapper');
+const secondPartWrapperChildNodes = secondPartWrapper.childNodes;
 
 // Adults +1 Add fields
-adultNumber.addEventListener('blur', () => {
-	const numberAdultNumber = Number(adultNumber.value);
+adultNumber.addEventListener('change', e => {
+	e.preventDefault();
 
-	for (let i = 1; i <= numberAdultNumber; i++) {
+	for (let i of secondPartWrapperChildNodes) {
+		if (i.className === 'second-part-adulte') {
+			i.remove();
+		}
+	}
+
+	for (let i = 1; i <= adultNumber.value; i++) {
 		addMoreFields(i, 'Adulte');
-		showAllergies();
-		createListAllergies();
-		handleBrunch();
 	}
 });
 
 // Child +1 Add fields
-document.querySelector('#nb-children').addEventListener('blur', () => {
-	const numberChildrenNumber = Number(childNumber.value);
+childNumber.addEventListener('change', e => {
+	e.preventDefault();
 
-	for (let i = 1; i <= numberChildrenNumber; i++) {
+	for (let i of secondPartWrapperChildNodes) {
+		if (i.className === 'second-part-enfant') {
+			i.remove();
+		}
+	}
+
+	for (let i = 1; i <= childNumber.value; i++) {
 		addMoreFields(i, 'Enfant');
-		showAllergies();
-		createListAllergies();
-		handleBrunch();
 	}
 });
 
@@ -145,16 +161,49 @@ function showAllergies() {
 
 showAllergies();
 
+//Create list when MAIN food is added
+const createListAllergiesFood = function () {
+	const btnAdd = document.querySelector('.btn-add');
+
+	const foodInput = btnAdd.previousElementSibling;
+	const foodList = btnAdd.parentElement.parentElement.nextElementSibling;
+	let foodValue = [];
+
+	btnAdd.addEventListener('click', e => {
+		e.preventDefault();
+
+		if (foodInput.value != '') {
+			const li = document.createElement('li');
+			li.className = 'list-item';
+			li.innerHTML = `
+				${foodInput.value}
+				<i class="fa-solid fa-xmark"></i>
+				`;
+			foodList.appendChild(li);
+			foodValue.push(foodInput.value);
+			foodInput.value = '';
+
+			li.firstElementChild.addEventListener('click', e => {
+				li.remove();
+			});
+		}
+		btnAdd.parentElement.previousElementSibling.firstElementChild.value =
+			foodValue;
+
+		// document.querySelector(`#${genre[0].toUpperCase()}${i}-food`).value =
+		// 	foodValue;
+	});
+};
+
 // Create list when food is added
-function createListAllergies() {
+const createListAllergies = function (i, genre) {
 	const btnAdd = document.querySelectorAll('.btn-add');
 	// const deleteItem = document.querySelector('.list-item i');
-
-	let foodValue = [];
 
 	btnAdd.forEach(btn => {
 		const foodInput = btn.previousElementSibling;
 		const foodList = btn.parentElement.parentElement.nextElementSibling;
+		let foodValue = [];
 
 		btn.addEventListener('click', e => {
 			e.preventDefault();
@@ -174,13 +223,16 @@ function createListAllergies() {
 					li.remove();
 				});
 			}
-			btn.parentElement.previousElementSibling.firstElementChild.value =
+			// btn.parentElement.previousElementSibling.firstElementChild.value =
+			// 	foodValue;
+
+			document.querySelector(`#${genre[0].toUpperCase()}${i}-food`).value =
 				foodValue;
 		});
 	});
-}
+};
 
-createListAllergies();
+createListAllergiesFood();
 
 // Submit Form
 

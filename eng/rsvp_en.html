@@ -12,6 +12,7 @@
 			referrerpolicy="no-referrer"
 		/>
 		<link rel="stylesheet" href="./../css/style.css" />
+
 		<title>Marie & Florent - RSVP</title>
 	</head>
 	<body>
@@ -74,60 +75,71 @@
 
 		<main class="rsvp-wrapper">
 			<section class="rsvp">
-				<!-- <img src="images/plant-1.webp" alt="" /> -->
 				<h2>RSVP</h2>
-				<form action="#" class="form">
-					<div class="name">
-						<div class="form__group">
-							<input
-								type="text"
-								id="lname"
-								class="form__field"
-								placeholder="Nom"
-								required
-							/>
-							<label for="lname" class="form__label">Last Name</label>
+				<form
+					class="form"
+					name="submit-rsvp"
+					method="POST"
+					action="'https://script.google.com/macros/s/AKfycbyQ8KJWFkbhBU3N71A4dF87CjNicIk8zjmOe2rdvSMphUdQoBTu9Ul3QmnSoLvNxSt0/exec'"
+				>
+					<div class="first-part">
+						<div class="name">
+							<div class="form__group">
+								<input
+									type="text"
+									name="Nom"
+									id="lname"
+									class="form__field"
+									placeholder="Nom"
+									required
+								/>
+								<label for="lname" class="form__label">Last Name</label>
+							</div>
+							<div class="form__group">
+								<input
+									type="text"
+									name="Prénom"
+									id="fname"
+									class="form__field"
+									placeholder="Prénom"
+									required
+								/>
+								<label for="fname" class="form__label">First Name</label>
+							</div>
 						</div>
-						<div class="form__group">
-							<input
-								type="text"
-								id="fname"
-								class="form__field"
-								placeholder="Prénom"
-								required
-							/>
-							<label for="fname" class="form__label">First Name</label>
-						</div>
-					</div>
-
-					<div class="attend">
-						<label for="not-attend" class="radio">
-							<input
-								type="radio"
-								id="not-attend"
-								name="attending"
-								class="radio__input"
-							/>
-							<span class="radio__radio"></span>
-							Will not be present for the wedding
-						</label>
-
-						<label for="attend-wedding" class="radio">
-							<input
-								type="radio"
-								name="attending"
-								id="attend-wedding"
-								class="radio__input"
-							/>
-							<span class="radio__radio"></span>
-							Will be present for the wedding
-						</label>
-
-						<div class="checkbox-container">
-							<input type="checkbox" id="attend-brunch" />
-							<label for="attend-brunch" class="brunch"
-								>Will be present for the Sunday brunch</label
-							>
+						<div class="attend">
+							<label for="not-attend" class="radio">
+								<input
+									type="radio"
+									id="not-attend"
+									name="Attending"
+									class="radio__input"
+								/>
+								<span class="radio__radio"></span>
+								Will not be present for the wedding
+							</label>
+							<label for="attend-wedding" class="radio">
+								<input
+									type="radio"
+									name="Attending"
+									id="attend-wedding"
+									class="radio__input"
+								/>
+								<span class="radio__radio"></span>
+								Will be present for the wedding
+							</label>
+							<div class="checkbox-container">
+								<input
+									type="checkbox"
+									id="attend-brunch"
+									class="attend-brunch"
+									name="Brunch"
+									value=""
+								/>
+								<label for="attend-brunch" class="brunch"
+									>Will be present for the Sunday brunch</label
+								>
+							</div>
 						</div>
 					</div>
 
@@ -136,9 +148,9 @@
 							<label for="nb-adult">Number of adults : </label>
 							<input
 								type="number"
-								name="nb-adult"
+								name="Adultes"
 								id="nb-adult"
-								min="1"
+								min="0"
 								max="50"
 								step="1"
 								inputmode="numeric"
@@ -150,9 +162,9 @@
 							</label>
 							<input
 								type="number"
-								name="nb-children"
+								name="Children"
 								id="nb-children"
-								min="1"
+								min="0"
 								max="50"
 								step="1"
 								inputmode="numeric"
@@ -160,7 +172,7 @@
 						</div>
 
 						<div class="checkbox-container food-wrapper">
-							<input type="checkbox" id="food" name="food" />
+							<input type="checkbox" id="food" name="Food" data-food />
 							<label for="food">Allergies & Food restrictions</label>
 						</div>
 						<div class="add-food form__group">
@@ -169,13 +181,16 @@
 								name="add"
 								id="food-input"
 								class="form__field"
-								placeholder="Add here"
+								placeholder="Ajouter ici"
+								data-food-input
 							/>
 							<button class="btn-form btn-add">Add</button>
 						</div>
 					</div>
 
 					<ul class="food-list"></ul>
+					<div class="second-part-wrapper"></div>
+
 					<button class="btn-form btn-submit" type="submit">Send</button>
 				</form>
 			</section>
