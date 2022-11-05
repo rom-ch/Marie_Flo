@@ -1,10 +1,10 @@
 // Contact show number
 
-const phoneButtons = document.querySelectorAll('.contact');
+const flipCardInner = document.querySelectorAll('.flip-card-inner');
 
-phoneButtons.forEach(phoneButton => {
-	phoneButton.addEventListener('click', () => {
-		phoneButton.classList.toggle('show-number');
+flipCardInner.forEach(flip => {
+	flip.addEventListener('click', () => {
+		flip.classList.toggle('active');
 	});
 });
 
@@ -15,11 +15,3 @@ phoneNumbers.forEach(phoneNumber => {
 		phoneNumber.attributes.href.value = '#';
 	}
 });
-
-// function copyText() {
-// 	phoneNumbers.forEach(phoneNumber => {
-// 		phoneNumber.addEventListener('click', () => {
-// 			navigator.clipboard.writeText('hello');
-// 		});
-// 	});
-// }
