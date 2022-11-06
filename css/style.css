@@ -995,6 +995,7 @@ input[type=checkbox]#active {
   width: 150px;
   height: 50px;
   perspective: 1000px;
+  transform-style: preserve-3d;
 }
 .flip-card-inner {
   background-color: #718879;
@@ -1015,6 +1016,7 @@ input[type=checkbox]#active {
   -moz-backface-visibility: hidden; /* Safari */
   backface-visibility: hidden;
   transform: rotateX(0deg);
+  transform-style: preserve-3d;
 }
 
 .flip-card-front {
