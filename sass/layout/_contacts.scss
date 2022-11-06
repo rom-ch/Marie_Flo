@@ -67,7 +67,6 @@
 	width: 150px;
 	height: 50px;
 	perspective: 1000px;
-	transform-style: preserve-3d;
 
 	&-inner {
 		background-color: $clr-primary-300;
@@ -89,7 +88,6 @@
 	-moz-backface-visibility: hidden; /* Safari */
 	backface-visibility: hidden;
 	transform: rotateX(0deg);
-	transform-style: preserve-3d;
 }
 
 .flip-card-front {
@@ -121,7 +119,7 @@
 	font-size: 1rem;
 	cursor: pointer;
 
-	a {
+	span {
 		color: white;
 	}
 }
