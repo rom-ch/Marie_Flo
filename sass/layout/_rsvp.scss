@@ -2,11 +2,20 @@
 
 .rsvp-wrapper {
 	min-height: calc(100vh - 90px);
-	background-color: $clr-primary-100;
-	background-image: url('../../images/henry-co--odUkx8C2gg-unsplash.jpg');
+	background-color: #bacbc7;
+	background-image: url('../../images/test\ green\ wallpaper.png');
 	background-repeat: no-repeat;
-	background-size: contain;
-	background-position: left;
+	background-size: 60%;
+	background-position: bottom right;
+	background-attachment: fixed;
+	position: relative;
+
+	img {
+		position: absolute;
+		width: 500px;
+		bottom: 0;
+		right: 50px;
+	}
 }
 
 .rsvp {
