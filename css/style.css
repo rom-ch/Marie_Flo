@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Karla:wght@300;400;500;600;700;800&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
 *,
 *::before,
@@ -460,7 +459,7 @@ input[type=checkbox]#active {
 }
 .localisation-wrapper {
   min-height: calc(100vh - 90px);
-  background: url(./../../images/thumbnail_Petit\ wetto\ vue\ générale.webp);
+  background: url("./../images/petit_wetto.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -535,7 +534,7 @@ input[type=checkbox]#active {
 .rsvp-wrapper {
   min-height: calc(100vh - 90px);
   background-color: #bacbc7;
-  background-image: url("../../images/test green wallpaper.png");
+  background-image: url("./../images/rsvp_background.webp");
   background-repeat: no-repeat;
   background-size: 60%;
   background-position: bottom right;
