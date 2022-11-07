@@ -4,7 +4,7 @@ const flipCardInner = document.querySelectorAll('.flip-card-inner');
 
 flipCardInner.forEach(flip => {
 	flip.addEventListener('click', () => {
-		flip.classList.toggle('active');
+		flip.style.transform = 'rotateY(180deg)';
 	});
 });
 
