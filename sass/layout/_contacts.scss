@@ -124,9 +124,11 @@
 	align-items: center;
 	font-size: 1rem;
 	cursor: pointer;
+	z-index: 3;
 
 	span {
 		color: white;
+		z-index: 3;
 	}
 }
 
