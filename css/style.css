@@ -1048,11 +1048,12 @@ input[type=checkbox]#active {
   align-items: center;
   font-size: 1rem;
   cursor: pointer;
-  z-index: 3;
 }
 .flip-card-back span {
   color: white;
-  z-index: 3;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
 }
 
 .active {
