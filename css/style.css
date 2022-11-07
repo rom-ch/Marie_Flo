@@ -1049,14 +1049,14 @@ input[type=checkbox]#active {
   font-size: 1rem;
   cursor: pointer;
 }
-.flip-card-back span {
+.flip-card-back div {
   color: white;
   -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
 
-.flip-card-inner:hover {
+.active {
   -webkit-transform: rotateY(180deg);
   -moz-transform: rotateY(180deg);
   transform: rotateY(180deg);
