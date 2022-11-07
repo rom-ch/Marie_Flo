@@ -997,7 +997,6 @@ input[type=checkbox]#active {
   perspective: 1000px;
 }
 .flip-card-inner {
-  background-color: #718879;
   border-radius: 50px;
   position: relative;
   width: 100%;
