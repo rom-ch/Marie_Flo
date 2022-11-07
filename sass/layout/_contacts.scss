@@ -90,6 +90,10 @@
 	-moz-backface-visibility: hidden; /* Safari */
 	backface-visibility: hidden;
 	transform: rotateX(0deg);
+
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;
 }
 
 .flip-card-front {
