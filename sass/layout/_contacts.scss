@@ -133,11 +133,17 @@
 	}
 }
 
-.active {
+.flip-card-inner:hover {
 	-webkit-transform: rotateY(180deg);
 	-moz-transform: rotateY(180deg);
 	transform: rotateY(180deg);
 }
+
+// .active {
+// 	-webkit-transform: rotateY(180deg);
+// 	-moz-transform: rotateY(180deg);
+// 	transform: rotateY(180deg);
+// }
 
 @media (max-width: 992px) {
 	.contacts-wrapper {

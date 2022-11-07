@@ -1056,7 +1056,7 @@ input[type=checkbox]#active {
   transform-style: preserve-3d;
 }
 
-.active {
+.flip-card-inner:hover {
   -webkit-transform: rotateY(180deg);
   -moz-transform: rotateY(180deg);
   transform: rotateY(180deg);
