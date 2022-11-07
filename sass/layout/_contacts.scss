@@ -70,7 +70,6 @@
 
 	&-inner {
 		position: relative;
-		border-radius: 50px;
 		width: 100%;
 		height: 100%;
 		transition: transform 0.8s;
@@ -86,6 +85,7 @@
 	width: 100%;
 	height: 100%;
 	background-color: $clr-primary-300;
+	border-radius: 50px;
 	-webkit-backface-visibility: hidden; /* Safari */
 	-moz-backface-visibility: hidden; /* Safari */
 	backface-visibility: hidden;

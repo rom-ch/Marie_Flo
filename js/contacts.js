@@ -15,3 +15,16 @@ phoneNumbers.forEach(phoneNumber => {
 		phoneNumber.attributes.href.value = '#';
 	}
 });
+
+// Copy Phone Numbers
+
+function copyNumber() {
+	phoneNumbers.forEach(number => {
+		number.addEventListener('click', e => {
+			e.preventDefault();
+			navigator.clipboard.writeText(e.target.innerText).then(function () {
+				alert('Number copied');
+			});
+		});
+	});
+}
