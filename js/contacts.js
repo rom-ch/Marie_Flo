@@ -4,17 +4,9 @@ const flipCardInner = document.querySelectorAll('.flip-card-inner');
 
 flipCardInner.forEach(flip => {
 	flip.addEventListener('click', () => {
-		flip.classList.add('active');
+		flip.classList.toggle('active');
 	});
 });
-
-const removeActive = function () {
-	flipCardInner.forEach(flip => {
-		flip.classList.remove('active');
-	});
-};
-
-setTimeout(removeActive, 8000);
 
 const phoneNumbers = document.querySelectorAll('.contact-number');
 
@@ -23,4 +15,3 @@ phoneNumbers.forEach(phoneNumber => {
 		phoneNumber.attributes.href.value = '#';
 	}
 });
-clearTimeout;

@@ -1308,12 +1308,18 @@ input[type=checkbox]#active {
 .dj__hero p {
   font-weight: 500;
 }
-.dj iframe {
-  width: 343px;
-  max-width: 880px;
-  height: 400px;
+
+.music-wrapper {
+  display: flex;
+  gap: 2rem;
+  width: 85%;
+}
+.music-wrapper iframe {
+  width: 360px;
+  height: 250px;
   border: 4px solid white;
   outline: 1px solid #198754;
+  flex-shrink: 0;
 }
 
 .music {
@@ -1321,7 +1327,7 @@ input[type=checkbox]#active {
   border: 1px solid #198754;
   padding: 1rem;
   width: 100%;
-  max-width: 1300px;
+  height: 250px;
 }
 .music .form-group-field {
   display: flex;
@@ -1359,6 +1365,44 @@ input[type=checkbox]#active {
 .music .btn-music-submit:focus {
   background-color: #198754;
   box-shadow: 0 0 0.25rem rgb(60, 153, 110);
+}
+
+.music-list-info {
+  font-weight: 500;
+  max-width: 80%;
+  text-align: center;
+}
+
+.music-pics {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 3rem;
+  width: 80%;
+}
+.music-pics img {
+  max-width: 100%;
+  width: 600px;
+  object-fit: cover;
+  aspect-ratio: 1/1;
+}
+
+@media (max-width: 768px) {
+  .music-wrapper {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .music-wrapper iframe {
+    width: 343px;
+  }
+  .music-list-info {
+    max-width: 90%;
+  }
+  .music-pics {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

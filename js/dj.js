@@ -1,6 +1,3 @@
-const djSheet = document.querySelector('iframe');
-console.log(djSheet.contentWindow);
-
 // Submit Tracks
 
 const form = document.querySelector('.music');
