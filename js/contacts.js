@@ -18,13 +18,13 @@ phoneNumbers.forEach(phoneNumber => {
 
 // Copy Phone Numbers
 
-function copyNumber() {
-	phoneNumbers.forEach(number => {
-		number.addEventListener('click', e => {
-			e.preventDefault();
-			navigator.clipboard.writeText(e.target.innerText).then(function () {
-				alert('Number copied');
-			});
-		});
-	});
-}
+// function copyNumber() {
+// 	phoneNumbers.forEach(number => {
+// 		number.addEventListener('click', e => {
+// 			e.preventDefault();
+// 			navigator.clipboard.writeText(this.innerText).then(function () {
+// 				alert(`Number copied ${this.innerText}`);
+// 			});
+// 		});
+// 	});
+// }

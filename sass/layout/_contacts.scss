@@ -124,12 +124,10 @@
 	align-items: center;
 	font-size: 1rem;
 	cursor: pointer;
+	overflow: hidden;
 
-	div {
+	a {
 		color: white;
-		-webkit-transform: rotateY(180deg);
-		-moz-transform: rotateY(180deg);
-		transform: rotateY(180deg);
 	}
 }
 
