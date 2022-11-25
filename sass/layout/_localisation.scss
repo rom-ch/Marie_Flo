@@ -2,7 +2,6 @@
 
 .localisation-wrapper {
 	min-height: calc(100vh - 90px);
-	// background-color: $clr-secondary-100;
 	background: url('./../images/petit_wetto.webp');
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -12,6 +11,10 @@
 	justify-content: center;
 	align-items: center;
 	padding-inline: 2rem;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
 }
 
 .localisation {
@@ -24,6 +27,7 @@
 	align-items: center;
 	color: white;
 	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	margin-block: 1rem;
 
 	&__text {
 		display: flex;
@@ -59,9 +63,48 @@
 	}
 }
 
+.localisation-route {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	padding: 3rem 2rem;
+}
+
+.route {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	align-items: center;
+	width: 100%;
+
+	&:nth-of-type(1) {
+		width: 60%;
+	}
+
+	&__icon {
+		font-size: 2rem;
+		margin-bottom: 1.5rem;
+
+		i {
+			width: 32px;
+			height: 32px;
+		}
+	}
+
+	&__origin {
+		margin-bottom: 0.5rem;
+		// max-width: 220px;
+	}
+
+	&__duration {
+		max-width: 220px;
+	}
+}
+
 @media (min-width: 769px) and (max-width: 992px) {
 	.localisation {
 		padding-inline: 1.5rem;
+		max-width: 100%;
 
 		&__map iframe {
 			width: 350px;
@@ -72,6 +115,7 @@
 @media (max-width: 768px) {
 	.localisation-wrapper {
 		padding-inline: 0;
+		background: none;
 	}
 
 	.localisation {
@@ -80,13 +124,18 @@
 		flex-direction: column;
 		gap: 3rem;
 		padding: 2rem 0.5rem;
+		max-width: 100%;
+		margin-block: 0;
 
 		&__map iframe {
 			width: 340px;
 			height: 340px;
 		}
+	}
 
-		&__text {
+	.route {
+		&:nth-of-type(1) {
+			width: 100%;
 		}
 	}
 }

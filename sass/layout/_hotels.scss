@@ -11,6 +11,15 @@
 	}
 }
 
+.pre-info {
+	text-align: center;
+	margin: 0 auto;
+	padding: 1rem;
+	font-weight: 500;
+	max-width: 70%;
+	line-height: 1.5;
+}
+
 .hotel-container {
 	margin: 2rem auto 1rem auto;
 	display: grid;
@@ -145,7 +154,6 @@
 	width: 100%;
 
 	.legend {
-		// color: white;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -159,15 +167,16 @@
 	.legend-phone {
 		border-right: 1px solid black;
 		width: 60%;
-
-		// i {
-		// 	margin-right: 0.5rem;
-		// }
 	}
 
 	.legend-walk {
 		width: 40%;
 	}
+}
+
+.airbnb {
+	margin-top: 2rem;
+	text-align: center;
 }
 
 @media (max-width: 1200px) {
@@ -178,6 +187,10 @@
 			'card3 card4'
 			'card5 card6';
 		gap: 2rem 1rem;
+	}
+
+	.pre-info {
+		max-width: 90%;
 	}
 }
 
@@ -203,12 +216,13 @@
 	}
 }
 
-@keyframes cardBy1 {
-}
-
 @media (max-width: 530px) {
 	.hotel {
 		width: 90%;
+	}
+
+	.pre-info {
+		max-width: 100%;
 	}
 }
 

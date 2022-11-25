@@ -282,10 +282,10 @@ input[type=checkbox]#active {
 }
 
 .home {
-  background-image: url("../images/dan-meyers-IQVFVH0ajag-unsplash.webp");
+  background-image: url("../images/S.EngagementMarieFlorent1022-web-1.webp");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: bottom;
+  background-position: center;
   background-attachment: fixed;
   display: flex;
   flex-direction: column;
@@ -358,6 +358,13 @@ input[type=checkbox]#active {
   margin-top: 6rem;
 }
 
+.dresscode .infos {
+  margin-top: 0;
+}
+.dresscode .infos .info__dresscode {
+  max-width: 400px;
+}
+
 .info {
   display: flex;
   flex-direction: column;
@@ -369,56 +376,9 @@ input[type=checkbox]#active {
   width: 100px;
   height: 100px;
 }
-
-.caroussel {
-  margin: 5rem auto 0 auto;
-  padding: 1rem;
-  max-width: 1200px;
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: 1fr 1fr 2fr;
-  grid-template-areas: "infos1 infos2 infos3" "infos4 infos5 infos3";
-}
-.caroussel img {
-  aspect-ratio: 1/1;
-  object-fit: cover;
-}
-.caroussel img:nth-of-type(1) {
-  grid-area: infos1;
-}
-.caroussel img:nth-of-type(2) {
-  grid-area: infos2;
-}
-.caroussel img:nth-of-type(3) {
-  grid-area: infos3;
-  height: 100%;
-}
-.caroussel img:nth-of-type(4) {
-  grid-area: infos4;
-}
-.caroussel img:nth-of-type(5) {
-  grid-area: infos5;
-}
-
-.dresscode-title {
-  text-align: center;
-  margin-block: 2rem 1rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-}
-.dresscode-title span {
-  width: 50px;
-}
-
-.dresscode {
-  padding: 1rem;
-  max-width: 600px;
-  margin: 0 auto;
-}
-.dresscode p {
-  margin-bottom: 0.5rem;
+.info__icon img {
+  width: 100px;
+  height: 100px;
 }
 
 @media (max-width: 768px) {
@@ -433,20 +393,6 @@ input[type=checkbox]#active {
   }
   .info {
     gap: 0.5rem;
-  }
-  .caroussel {
-    display: flex;
-    flex-direction: column;
-    padding-inline: 1rem;
-    margin-top: 3rem;
-    max-width: 100%;
-  }
-  .caroussel img {
-    width: 100%;
-  }
-  .caroussel img:nth-of-type(3) {
-    width: 100%;
-    aspect-ratio: 1/1;
   }
 }
 @media (min-width: 769px) and (max-width: 992px) {
@@ -468,6 +414,10 @@ input[type=checkbox]#active {
   justify-content: center;
   align-items: center;
   padding-inline: 2rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .localisation {
@@ -480,6 +430,7 @@ input[type=checkbox]#active {
   align-items: center;
   color: white;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin-block: 1rem;
 }
 .localisation__text {
   display: flex;
@@ -508,9 +459,42 @@ input[type=checkbox]#active {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
+.localisation-route {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 3rem 2rem;
+}
+
+.route {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  width: 100%;
+}
+.route:nth-of-type(1) {
+  width: 60%;
+}
+.route__icon {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+.route__icon i {
+  width: 32px;
+  height: 32px;
+}
+.route__origin {
+  margin-bottom: 0.5rem;
+}
+.route__duration {
+  max-width: 220px;
+}
+
 @media (min-width: 769px) and (max-width: 992px) {
   .localisation {
     padding-inline: 1.5rem;
+    max-width: 100%;
   }
   .localisation__map iframe {
     width: 350px;
@@ -519,33 +503,31 @@ input[type=checkbox]#active {
 @media (max-width: 768px) {
   .localisation-wrapper {
     padding-inline: 0;
+    background: none;
   }
   .localisation {
     background-color: #718879;
     flex-direction: column;
     gap: 3rem;
     padding: 2rem 0.5rem;
+    max-width: 100%;
+    margin-block: 0;
   }
   .localisation__map iframe {
     width: 340px;
     height: 340px;
   }
+  .route:nth-of-type(1) {
+    width: 100%;
+  }
 }
 .rsvp-wrapper {
   min-height: calc(100vh - 90px);
-  background-color: #bacbc7;
-  background-image: url("./../images/rsvp_background.webp");
+  background-image: url("../images/sven-wilhelm-2cRXSWyMHA8-unsplash.webp");
   background-repeat: no-repeat;
-  background-size: 60%;
-  background-position: bottom right;
+  background-size: cover;
+  background-position: center;
   background-attachment: fixed;
-  position: relative;
-}
-.rsvp-wrapper img {
-  position: absolute;
-  width: 500px;
-  bottom: 0;
-  right: 50px;
 }
 
 .rsvp {
@@ -782,6 +764,10 @@ input[type=checkbox]#active {
   background-color: rgba(46, 77, 67, 0.7);
 }
 
+.food-wrapper {
+  display: none;
+}
+
 .form input[type=number] {
   border: 2px solid #102f25;
   outline: 0;
@@ -803,7 +789,6 @@ input[type=checkbox]#active {
   background-color: rgba(46, 77, 67, 0.7);
 }
 
-/* Chrome, Safari, Edge, Opera */
 .btn-form {
   border: none;
   outline: none;
@@ -829,6 +814,9 @@ input[type=checkbox]#active {
 }
 
 @media (max-width: 768px) {
+  .rsvp-wrapper {
+    background: #c4d0cd;
+  }
   .rsvp {
     padding-inline: 0.5rem;
     padding-block: 1rem 2rem;
@@ -883,15 +871,18 @@ input[type=checkbox]#active {
   grid-area: pot3;
 }
 .wedding-list .pot {
-  max-width: 1100px;
+  max-width: 1000px;
   margin: 0 auto;
+  margin-bottom: 2rem;
 }
 .wedding-list .pot__title {
   font-size: 2rem;
+  text-align: center;
 }
 .wedding-list .pot__text {
   margin-block: 2rem;
   font-weight: 500;
+  line-height: 1.5;
 }
 .wedding-list .pot .pot__btn {
   color: #fff;
@@ -932,17 +923,22 @@ input[type=checkbox]#active {
   }
   .wedding-list__grid img:nth-of-type(2) {
     grid-area: pot2;
+    aspect-ratio: 1/1;
   }
   .wedding-list__grid img:nth-of-type(3) {
     grid-area: pot3;
+    aspect-ratio: 1/1;
+  }
+  .pot__text {
+    text-align: center;
   }
 }
 .contacts-wrapper {
   min-height: calc(100vh - 90px);
-  background: url("../../images/dan-meyers-IQVFVH0ajag-unsplash.webp");
+  background: url("../images/lukas-kulla-zdbbjqfE-ZI-unsplash.webp");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: top;
+  background-position: center;
   padding: 2rem;
   display: flex;
   flex-direction: column;
@@ -954,7 +950,7 @@ input[type=checkbox]#active {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   max-width: 800px;
   padding: 2rem;
-  background-color: rgba(196, 208, 205, 0.8);
+  background-color: rgba(196, 208, 205, 0.9);
 }
 .contacts__title {
   font-size: 2.5rem;
@@ -1102,6 +1098,15 @@ input[type=checkbox]#active {
   margin-bottom: 1rem;
 }
 
+.pre-info {
+  text-align: center;
+  margin: 0 auto;
+  padding: 1rem;
+  font-weight: 500;
+  max-width: 70%;
+  line-height: 1.5;
+}
+
 .hotel-container {
   margin: 2rem auto 1rem auto;
   display: grid;
@@ -1238,11 +1243,19 @@ input[type=checkbox]#active {
   width: 40%;
 }
 
+.airbnb {
+  margin-top: 2rem;
+  text-align: center;
+}
+
 @media (max-width: 1200px) {
   .hotel-container {
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "card1 card2" "card3 card4" "card5 card6";
     gap: 2rem 1rem;
+  }
+  .pre-info {
+    max-width: 90%;
   }
 }
 @media (max-width: 800px) {
@@ -1258,10 +1271,12 @@ input[type=checkbox]#active {
     width: 70%;
   }
 }
-@keyframes cardBy1 {}
 @media (max-width: 530px) {
   .hotel {
     width: 90%;
+  }
+  .pre-info {
+    max-width: 100%;
   }
 }
 .hotel:nth-child(1) {
@@ -1289,10 +1304,11 @@ input[type=checkbox]#active {
 }
 
 .dj {
+  min-height: calc(100vh - 90px);
   background-color: #f8f9fa;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   gap: 2rem;
   padding: 2rem 1rem;
@@ -1373,20 +1389,6 @@ input[type=checkbox]#active {
   text-align: center;
 }
 
-.music-pics {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  gap: 3rem;
-  width: 80%;
-}
-.music-pics img {
-  max-width: 100%;
-  width: 600px;
-  object-fit: cover;
-  aspect-ratio: 1/1;
-}
-
 @media (max-width: 768px) {
   .music-wrapper {
     flex-direction: column;
@@ -1399,9 +1401,6 @@ input[type=checkbox]#active {
   }
   .music-list-info {
     max-width: 90%;
-  }
-  .music-pics {
-    width: 100%;
   }
 }
 

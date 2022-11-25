@@ -5,6 +5,11 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link
+			rel="icon"
+			href="./../images/wedding-rings-icon.svg"
+			type="image/x-icon"
+		/>
+		<link
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
 			integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
@@ -53,10 +58,7 @@
 						<a href="rsvp.html" class="nav-link">RSVP</a>
 					</li>
 					<li class="nav-item">
-						<a href="hotels.html" class="nav-link">Où dormir?</a>
-					</li>
-					<li class="nav-item">
-						<a href="localisation.html" class="nav-link">Comment venir?</a>
+						<a href="hotels.html" class="nav-link">Où dormir ?</a>
 					</li>
 					<li class="nav-item">
 						<a href="planning.html" class="nav-link">Planning</a>
@@ -67,7 +69,7 @@
 						>
 					</li>
 					<li class="nav-item">
-						<a href="dj.html" class="nav-link">DJ</a>
+						<a href="dj.html" class="nav-link">Playlist DJ</a>
 					</li>
 					<li class="nav-item">
 						<a href="contacts.html" class="nav-link">Contacts</a>
@@ -78,7 +80,6 @@
 
 		<main class="rsvp-wrapper">
 			<section class="rsvp">
-				<!-- <img src="./../images/Sans titre-1.png" alt="" /> -->
 				<h2>RSVP</h2>
 				<form
 					class="form"
@@ -144,12 +145,32 @@
 									>Sera présent pour le brunch du lendemin</label
 								>
 							</div>
+							<div class="checkbox-container food-wrapper">
+								<input type="checkbox" id="food" name="Food" data-food />
+								<label for="food">Allergies & régimes alimentaires </label>
+							</div>
+							<div class="add-food form__group">
+								<input
+									type="text"
+									name="add"
+									id="food-input"
+									class="form__field"
+									placeholder="Ajouter ici"
+									data-food-input
+								/>
+								<button class="btn-form btn-add">Ajouter</button>
+							</div>
 						</div>
 					</div>
 
 					<div class="guest-info">
+						<p>
+							Référez-vous aux destinataires inscrits sur les enveloppes des
+							invitations pour savoir si un accompagnant est prévu pour vous,
+							merci !
+						</p>
 						<div class="number-container">
-							<label for="nb-adult">Nombre d'adultes : </label>
+							<label for="nb-adult">Accompagnant : </label>
 							<input
 								type="number"
 								name="Adultes"
@@ -175,21 +196,7 @@
 							/>
 						</div>
 
-						<div class="checkbox-container food-wrapper">
-							<input type="checkbox" id="food" name="Food" data-food />
-							<label for="food">Allergies & régimes alimentaires </label>
-						</div>
-						<div class="add-food form__group">
-							<input
-								type="text"
-								name="add"
-								id="food-input"
-								class="form__field"
-								placeholder="Ajouter ici"
-								data-food-input
-							/>
-							<button class="btn-form btn-add">Ajouter</button>
-						</div>
+						<!-- here -->
 					</div>
 
 					<ul class="food-list"></ul>

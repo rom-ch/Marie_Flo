@@ -3,13 +3,16 @@
 const attendWedding = document.querySelector('#attend-wedding');
 const guestInfo = document.querySelector('.guest-info');
 const notAttending = document.querySelector('#not-attend');
+const foodWrapper = document.querySelector('.food-wrapper');
 
 function handleRadioClick() {
 	if (attendWedding.checked) {
 		guestInfo.style.display = 'flex';
 		attendWedding.value = 'Présent';
+		foodWrapper.style.display = 'flex';
 	} else {
 		guestInfo.style.display = 'none';
+		foodWrapper.style.display = 'none';
 	}
 
 	if (notAttending.checked) {

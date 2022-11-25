@@ -1,10 +1,11 @@
 @use '../abstracts/' as *;
 
 .dj {
+	min-height: calc(100vh - 90px);
 	background-color: #f8f9fa;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: space-around;
 	align-items: center;
 	gap: 2rem;
 	padding: 2rem 1rem;
@@ -97,21 +98,6 @@
 	text-align: center;
 }
 
-.music-pics {
-	display: flex;
-	justify-content: space-around;
-	flex-wrap: wrap;
-	gap: 3rem;
-	width: 80%;
-
-	img {
-		max-width: 100%;
-		width: 600px;
-		object-fit: cover;
-		aspect-ratio: 1/1;
-	}
-}
-
 @media (max-width: 768px) {
 	.music-wrapper {
 		flex-direction: column;
@@ -126,9 +112,5 @@
 
 	.music-list-info {
 		max-width: 90%;
-	}
-
-	.music-pics {
-		width: 100%;
 	}
 }

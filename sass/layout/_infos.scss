@@ -21,6 +21,14 @@
 	margin-top: 6rem;
 }
 
+.dresscode .infos {
+	margin-top: 0;
+
+	.info__dresscode {
+		max-width: 400px;
+	}
+}
+
 .info {
 	display: flex;
 	flex-direction: column;
@@ -31,68 +39,11 @@
 	&__icon {
 		width: 100px;
 		height: 100px;
-	}
-}
 
-.caroussel {
-	margin: 5rem auto 0 auto;
-	padding: 1rem;
-	max-width: 1200px;
-	display: grid;
-	gap: 1rem;
-	grid-template-columns: 1fr 1fr 2fr;
-	// grid-template-rows: 300px 300px;
-	grid-template-areas:
-		'infos1 infos2 infos3'
-		'infos4 infos5 infos3';
-
-	img {
-		aspect-ratio: 1/1;
-		object-fit: cover;
-
-		&:nth-of-type(1) {
-			grid-area: infos1;
+		img {
+			width: 100px;
+			height: 100px;
 		}
-
-		&:nth-of-type(2) {
-			grid-area: infos2;
-		}
-
-		&:nth-of-type(3) {
-			grid-area: infos3;
-			height: 100%;
-		}
-
-		&:nth-of-type(4) {
-			grid-area: infos4;
-		}
-
-		&:nth-of-type(5) {
-			grid-area: infos5;
-		}
-	}
-}
-
-.dresscode-title {
-	text-align: center;
-	margin-block: 2rem 1rem;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	gap: 1rem;
-
-	span {
-		width: 50px;
-	}
-}
-
-.dresscode {
-	padding: 1rem;
-	max-width: 600px;
-	margin: 0 auto;
-
-	p {
-		margin-bottom: 0.5rem;
 	}
 }
 
@@ -110,23 +61,6 @@
 
 	.info {
 		gap: 0.5rem;
-	}
-
-	.caroussel {
-		display: flex;
-		flex-direction: column;
-		padding-inline: 1rem;
-		margin-top: 3rem;
-		max-width: 100%;
-
-		img {
-			width: 100%;
-
-			&:nth-of-type(3) {
-				width: 100%;
-				aspect-ratio: 1/1;
-			}
-		}
 	}
 }
 

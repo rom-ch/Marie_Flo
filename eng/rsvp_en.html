@@ -1,9 +1,14 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="icon"
+			href="./../images/wedding-rings-icon.svg"
+			type="image/x-icon"
+		/>
 		<link
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
@@ -34,8 +39,8 @@
 				</div>
 			</div>
 			<div class="header__title">
-				<h1>Wedding Marie & Florent</h1>
-				<h2>6th May, 2023</h2>
+				<h1>Marie & Florent’s Wedding</h1>
+				<h2>May 6th, 2023</h2>
 			</div>
 			<input type="checkbox" id="active" />
 			<label for="active" class="menu-btn"
@@ -56,18 +61,13 @@
 						<a href="hotels_en.html" class="nav-link">Where to sleep?</a>
 					</li>
 					<li class="nav-item">
-						<a href="localisation_en.html" class="nav-link"
-							>How to get there?</a
-						>
-					</li>
-					<li class="nav-item">
 						<a href="planning_en.html" class="nav-link">Schedule</a>
 					</li>
 					<li class="nav-item">
 						<a href="liste_de_mariage_en.html" class="nav-link">Wedding list</a>
 					</li>
 					<li class="nav-item">
-						<a href="dj_en.html" class="nav-link">DJ</a>
+						<a href="dj_en.html" class="nav-link">Playlist DJ</a>
 					</li>
 					<li class="nav-item">
 						<a href="contacts_en.html" class="nav-link">Contacts</a>
@@ -143,12 +143,31 @@
 									>Will be present for the Sunday brunch</label
 								>
 							</div>
+							<div class="checkbox-container food-wrapper">
+								<input type="checkbox" id="food" name="Food" data-food />
+								<label for="food">Allergies & Food restrictions</label>
+							</div>
+							<div class="add-food form__group">
+								<input
+									type="text"
+									name="add"
+									id="food-input"
+									class="form__field"
+									placeholder="Ajouter ici"
+									data-food-input
+								/>
+								<button class="btn-form btn-add">Add</button>
+							</div>
 						</div>
 					</div>
 
 					<div class="guest-info">
+						<p>
+							Please refer to the invitation’s envelope to check if a plus one
+							is planned for you.
+						</p>
 						<div class="number-container">
-							<label for="nb-adult">Number of adults : </label>
+							<label for="nb-adult">Plus one : </label>
 							<input
 								type="number"
 								name="Adultes"
@@ -172,22 +191,6 @@
 								step="1"
 								inputmode="numeric"
 							/>
-						</div>
-
-						<div class="checkbox-container food-wrapper">
-							<input type="checkbox" id="food" name="Food" data-food />
-							<label for="food">Allergies & Food restrictions</label>
-						</div>
-						<div class="add-food form__group">
-							<input
-								type="text"
-								name="add"
-								id="food-input"
-								class="form__field"
-								placeholder="Ajouter ici"
-								data-food-input
-							/>
-							<button class="btn-form btn-add">Add</button>
 						</div>
 					</div>
 

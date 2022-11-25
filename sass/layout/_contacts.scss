@@ -2,10 +2,10 @@
 
 .contacts-wrapper {
 	min-height: calc(100vh - 90px);
-	background: url('../../images/dan-meyers-IQVFVH0ajag-unsplash.webp');
+	background: url('../images/lukas-kulla-zdbbjqfE-ZI-unsplash.webp');
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-position: top;
+	background-position: center;
 	padding: 2rem;
 	display: flex;
 	flex-direction: column;
@@ -17,7 +17,7 @@
 	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 	max-width: 800px;
 	padding: 2rem;
-	background-color: rgba($clr-primary-100, 0.8);
+	background-color: rgba($clr-primary-100, 0.9);
 
 	&__title {
 		font-size: 2.5rem;

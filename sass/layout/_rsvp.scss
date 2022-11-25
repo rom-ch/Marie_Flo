@@ -2,20 +2,11 @@
 
 .rsvp-wrapper {
 	min-height: calc(100vh - 90px);
-	background-color: #bacbc7;
-	background-image: url('./../images/rsvp_background.webp');
+	background-image: url('../images/sven-wilhelm-2cRXSWyMHA8-unsplash.webp');
 	background-repeat: no-repeat;
-	background-size: 60%;
-	background-position: bottom right;
+	background-size: cover;
+	background-position: center;
 	background-attachment: fixed;
-	position: relative;
-
-	img {
-		position: absolute;
-		width: 500px;
-		bottom: 0;
-		right: 50px;
-	}
 }
 
 .rsvp {
@@ -296,6 +287,10 @@
 	}
 }
 
+.food-wrapper {
+	display: none;
+}
+
 // Number Input Style
 
 .form input[type='number'] {
@@ -321,18 +316,6 @@
 		background-color: rgb(46, 77, 67, 0.7);
 	}
 }
-
-/* Chrome, Safari, Edge, Opera */
-// input::-webkit-outer-spin-button,
-// input::-webkit-inner-spin-button {
-// 	-webkit-appearance: none;
-// 	margin: 0;
-// }
-
-// /* Firefox */
-// input[type='number'] {
-// 	-moz-appearance: textfield;
-// }
 
 // Button Sbmit style
 
@@ -364,6 +347,10 @@
 }
 
 @media (max-width: 768px) {
+	.rsvp-wrapper {
+		background: $clr-primary-100;
+	}
+
 	.rsvp {
 		padding-inline: 0.5rem;
 		padding-block: 1rem 2rem;
