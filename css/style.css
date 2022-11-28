@@ -417,7 +417,7 @@ input[type=checkbox]#active {
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .localisation {
@@ -924,10 +924,16 @@ input[type=checkbox]#active {
   .wedding-list__grid img:nth-of-type(2) {
     grid-area: pot2;
     aspect-ratio: 1/1;
+    width: 210px;
+    height: 210px;
+    display: none;
   }
   .wedding-list__grid img:nth-of-type(3) {
     grid-area: pot3;
     aspect-ratio: 1/1;
+    width: 210px;
+    height: 210px;
+    display: none;
   }
   .pot__text {
     text-align: center;

@@ -171,6 +171,7 @@ const createListAllergiesFood = function () {
 	const foodInput = btnAdd.previousElementSibling;
 	const foodList = btnAdd.parentElement.parentElement.nextElementSibling;
 	let foodValue = [];
+	console.log(foodList);
 
 	btnAdd.addEventListener('click', e => {
 		e.preventDefault();
