@@ -17,8 +17,7 @@
 			referrerpolicy="no-referrer"
 		/>
 		<link rel="stylesheet" href="./../css/style.css" />
-
-		<title>Marie & Florent - Liste de mariage</title>
+		<title>Marie & Florent - Contacts</title>
 	</head>
 	<body>
 		<header class="header">
@@ -28,11 +27,11 @@
 					<i class="fa-solid fa-caret-down"></i>
 				</button>
 				<div class="dropdown-content">
-					<a href="liste_de_mariage.html">
+					<a href="planning.html">
 						<img src="./../images/fr.svg" alt="#" />
 						Français
 					</a>
-					<a href="./../eng/liste_de_mariage_en.html">
+					<a href="./../eng/planning_en.html">
 						<img src="./../images/us.svg" alt="#" />
 						English
 					</a>
@@ -78,29 +77,52 @@
 			</nav>
 		</header>
 
-		<main>
-			<section class="wedding-list">
-				<div class="pot">
-					<h2 class="pot__title">Liste de Mariage</h2>
-					<p class="pot__text">
-						Comme nous sommes déjà bien gâtés, nous ne prévoyons pas de liste de
-						mariage, mais une enveloppe. Votre présence est déjà un cadeau mais
-						si vous souhaitez nous témoigner davantage, participez à notre
-						voyage de noces (une escapade au Pays du Père Noël !) ou à
-						l’acquisition de notre futur nid d’amour ❤️
-					</p>
-					<a href="#" class="pot__btn">Participer</a>
-					<p style="margin-top: 1rem">
-						<small>* La cagnotte sera disponible très bientôt</small>
+		<main class="planning-wrapper">
+			<section class="planning">
+				<h1 class="planning__title">Planning</h1>
+				<div class="planning__infos">
+					<div class="planning__infos-img">
+						<img src="./../images/Planning_Mariage_Site_Web.webp" alt="" />
+					</div>
+					<p class="planning__infos-text">
+						<strong>
+							Nous laissons les rênes à nos témoins pour organiser la cérémonie.
+							Si vous souhaitez faire un discours, pensez à les en informer !
+							Cela permettra de coordonner vos interventions avec eux en
+							fonction de ce qui est prévu. Merci ! </strong
+						><br /><em>Vous trouverez leurs numéros dans l’onglet Contact</em>
 					</p>
 				</div>
-				<div class="wedding-list__grid">
-					<img src="./../images/simon-smith-B4qBdlNIuS0-unsplash.webp" alt="" />
-					<img src="./../images/66-north-YmD5N1oBmq4-unsplash.webp" alt="" />
-					<img
-						src="./../images/maria-vojtovicova-SPvJPDXEmqA-unsplash.webp"
-						alt=""
-					/>
+			</section>
+
+			<section aria-label="Newest Photos">
+				<div class="carousel" data-carousel>
+					<button class="carousel-button prev" data-carousel-button="prev">
+						<i class="fa-solid fa-arrow-left"></i>
+					</button>
+					<button class="carousel-button next" data-carousel-button="next">
+						<i class="fa-solid fa-arrow-right"></i>
+					</button>
+					<ul data-slides>
+						<li class="slide" data-active>
+							<img
+								src="./../images/S.EngagementMarieFlorent1022-web-13.webp"
+								alt=""
+							/>
+						</li>
+						<li class="slide">
+							<img
+								src="./../images/S.EngagementMarieFlorent1022-web-14.webp"
+								alt=""
+							/>
+						</li>
+						<li class="slide">
+							<img
+								src="./../images/S.EngagementMarieFlorent1022-web-7.webp"
+								alt=""
+							/>
+						</li>
+					</ul>
 				</div>
 			</section>
 		</main>
@@ -119,5 +141,7 @@
 				>
 			</div>
 		</footer>
+
+		<script src="./../js/planning.js"></script>
 	</body>
 </html>

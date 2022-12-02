@@ -17,7 +17,7 @@
 			referrerpolicy="no-referrer"
 		/>
 		<link rel="stylesheet" href="./../css/style.css" />
-		<title>Marie & Florent - Wedding list</title>
+		<title>Marie & Florent - Contacts</title>
 	</head>
 	<body>
 		<header class="header">
@@ -27,11 +27,11 @@
 					<i class="fa-solid fa-caret-down"></i>
 				</button>
 				<div class="dropdown-content">
-					<a href="./../fr/liste_de_mariage.html">
+					<a href="./../fr/planning.html">
 						<img src="./../images/fr.svg" alt="#" />
 						Français
 					</a>
-					<a href="liste_de_mariage_en.html">
+					<a href="planning_en.html">
 						<img src="./../images/us.svg" alt="#" />
 						English
 					</a>
@@ -75,29 +75,51 @@
 			</nav>
 		</header>
 
-		<main>
-			<section class="wedding-list">
-				<div class="pot">
-					<h2 class="pot__title">Wedding list</h2>
-					<p class="pot__text">
-						As we are already very lucky, we are not doing a wedding
-						registration but an open envelope. Your presence is already a gift
-						but if you'd like to testify more, participate to our honeymoon (a
-						getaway to Santa Claus' Country) or the acquisition of our future
-						love nest ❤️
-					</p>
-					<a href="#" class="pot__btn">Participate</a>
-					<p style="margin-top: 1rem">
-						<small>* The pot will be available very soon</small>
+		<main class="planning-wrapper">
+			<section class="planning">
+				<h1 class="planning__title">Schedule</h1>
+				<div class="planning__infos">
+					<div class="planning__infos-img">
+						<img src="./../images/Planning_Mariage_Site_Web.webp" alt="" />
+					</div>
+					<p class="planning__infos-text">
+						<strong>
+							Our bridesmaids and groomsmen will lead our ceremony. If you want
+							to make a speech, please reach out to them! This way, they will be
+							able to coordinate with what is already planned. Thanks!</strong
+						><br /><em>Contact info can be found in the Contact tab</em>
 					</p>
 				</div>
-				<div class="wedding-list__grid">
-					<img src="./../images/simon-smith-B4qBdlNIuS0-unsplash.webp" alt="" />
-					<img src="./../images/66-north-YmD5N1oBmq4-unsplash.webp" alt="" />
-					<img
-						src="./../images/maria-vojtovicova-SPvJPDXEmqA-unsplash.webp"
-						alt=""
-					/>
+			</section>
+
+			<section aria-label="Newest Photos">
+				<div class="carousel" data-carousel>
+					<button class="carousel-button prev" data-carousel-button="prev">
+						<i class="fa-solid fa-arrow-left"></i>
+					</button>
+					<button class="carousel-button next" data-carousel-button="next">
+						<i class="fa-solid fa-arrow-right"></i>
+					</button>
+					<ul data-slides>
+						<li class="slide" data-active>
+							<img
+								src="./../images/S.EngagementMarieFlorent1022-web-13.webp"
+								alt=""
+							/>
+						</li>
+						<li class="slide">
+							<img
+								src="./../images/S.EngagementMarieFlorent1022-web-14.webp"
+								alt=""
+							/>
+						</li>
+						<li class="slide">
+							<img
+								src="./../images/S.EngagementMarieFlorent1022-web-7.webp"
+								alt=""
+							/>
+						</li>
+					</ul>
 				</div>
 			</section>
 		</main>
@@ -116,5 +138,7 @@
 				>
 			</div>
 		</footer>
+
+		<script src="./../js/planning.js"></script>
 	</body>
 </html>

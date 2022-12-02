@@ -80,7 +80,7 @@ const addMoreFields = function (i, genre) {
 								</div>
 
 							</div>
-							<div class="checkbox-container food-wrapper">
+							<div class="checkbox-container food-wrapper" style="display: flex">
 							<input type="checkbox" id="${genre[0].toUpperCase()}${i}-food" name="${genre[0].toUpperCase()}${i}-Food" data-food />
 							<label for="${genre[0].toUpperCase()}${i}-food">Allergies & régimes alimentaires </label>
 						</div>
@@ -93,7 +93,7 @@ const addMoreFields = function (i, genre) {
 								placeholder="Ajouter ici"
 								data-food-input
 							/>
-							<button class="btn-form btn-add">Ajouter</button>
+							<button class="btn-form btn-add btn-add-${genre[0].toUpperCase()}${i}" >Ajouter</button>
 						</div>
 					</div>
 
@@ -154,9 +154,11 @@ function showAllergies() {
 	checkboxFood.forEach(checkFood => {
 		checkFood.addEventListener('click', () => {
 			if (checkFood.checked) {
-				checkFood.parentElement.nextElementSibling.style.display = 'flex';
+				checkFood.parentElement.nextElementSibling.style.display =
+					'flex';
 			} else {
-				checkFood.parentElement.nextElementSibling.style.display = 'none';
+				checkFood.parentElement.nextElementSibling.style.display =
+					'none';
 			}
 		});
 	});
@@ -164,14 +166,17 @@ function showAllergies() {
 
 showAllergies();
 
-//Create list when MAIN food is added
-const createListAllergiesFood = function () {
-	const btnAdd = document.querySelector('.btn-add');
+////////////////////////////////////////////////////////////////////
+
+// Create list when food is added
+const createListAllergies = function (i, genre) {
+	const btnAdd = document.querySelector(
+		`.btn-add-${genre[0].toUpperCase()}${i}`
+	);
 
 	const foodInput = btnAdd.previousElementSibling;
 	const foodList = btnAdd.parentElement.parentElement.nextElementSibling;
 	let foodValue = [];
-	console.log(foodList);
 
 	btnAdd.addEventListener('click', e => {
 		e.preventDefault();
@@ -191,52 +196,44 @@ const createListAllergiesFood = function () {
 				li.remove();
 			});
 		}
-		btnAdd.parentElement.previousElementSibling.firstElementChild.value =
+		document.querySelector(`#${genre[0].toUpperCase()}${i}-food`).value =
 			foodValue;
-
-		// document.querySelector(`#${genre[0].toUpperCase()}${i}-food`).value =
-		// 	foodValue;
 	});
 };
 
-// Create list when food is added
-const createListAllergies = function (i, genre) {
-	const btnAdd = document.querySelectorAll('.btn-add');
-	// const deleteItem = document.querySelector('.list-item i');
+///////////////////////////////////////////////
+const createMainListAllergies = function () {
+	const btnAddMain = document.querySelector('.btn-add-main');
 
-	btnAdd.forEach(btn => {
-		const foodInput = btn.previousElementSibling;
-		const foodList = btn.parentElement.parentElement.nextElementSibling;
-		let foodValue = [];
+	const foodInput = btnAddMain.previousElementSibling;
+	const foodList = btnAddMain.parentElement.parentElement.nextElementSibling;
+	let foodValueMain = [];
 
-		btn.addEventListener('click', e => {
-			e.preventDefault();
+	btnAddMain.addEventListener('click', e => {
+		e.preventDefault();
 
-			if (foodInput.value != '') {
-				const li = document.createElement('li');
-				li.className = 'list-item';
-				li.innerHTML = `
+		if (foodInput.value != '') {
+			const li = document.createElement('li');
+			li.className = 'list-item';
+			li.innerHTML = `
 				${foodInput.value}
 				<i class="fa-solid fa-xmark"></i>
 				`;
-				foodList.appendChild(li);
-				foodValue.push(foodInput.value);
-				foodInput.value = '';
+			foodList.appendChild(li);
+			foodValueMain.push(foodInput.value);
+			foodInput.value = '';
 
-				li.firstElementChild.addEventListener('click', e => {
-					li.remove();
-				});
-			}
-			// btn.parentElement.previousElementSibling.firstElementChild.value =
-			// 	foodValue;
+			li.firstElementChild.addEventListener('click', e => {
+				li.remove();
+			});
+		}
 
-			document.querySelector(`#${genre[0].toUpperCase()}${i}-food`).value =
-				foodValue;
-		});
+		document.querySelector('#food').value = foodValueMain;
 	});
 };
+///////////////////////////////////////////////
 
-createListAllergiesFood();
+createMainListAllergies();
 
 // Submit Form
 
@@ -249,6 +246,7 @@ form.addEventListener('submit', e => {
 	submitButton.disabled = true;
 	e.preventDefault();
 	handleBrunch();
+
 	let requestBody = new FormData(form);
 	fetch(scriptURL, { method: 'POST', body: requestBody })
 		.then(response => {
